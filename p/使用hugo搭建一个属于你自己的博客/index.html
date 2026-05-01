@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\n搭建博客\r💡\r提示\r因为hugo.Extended效果比hugo强，所以下文统一使用hugo.Extended\n准备工作\r安装VS Code\rVS Code 是微软官方免费开源的文本编辑器，支持 Windows、macOS 和 Linux 三大平台。\n下载与安装 VS Code\r打开 VS Code 下载页面，根据你使用的操作系统选择合适的安装包\n打开安装包根据安装提示进行安装\n配置VS Code\r安装完毕之后，在桌面双击打开 Visual Studio Code，分别搜索并安装以下插件：\n">
+<title>使用Hugo搭建一个属于你自己的博客</title>
+
+
+<link rel="canonical" href="https://demo.stack.cai.im/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    
+
+<link rel="stylesheet" href="/scss/style.min.389e156f5e9bb13df5a924cfa99dfb9c39f3e01e68d9e146cd65bdae963be145.css">
+<script src="/ts/main.min.1fa346218a1a118c9f3635409187df2859ffc0baed5067527ee7cc49e47da431.js"></script><meta property='og:title' content="使用Hugo搭建一个属于你自己的博客">
+<meta property='og:description' content="\n搭建博客\r💡\r提示\r因为hugo.Extended效果比hugo强，所以下文统一使用hugo.Extended\n准备工作\r安装VS Code\rVS Code 是微软官方免费开源的文本编辑器，支持 Windows、macOS 和 Linux 三大平台。\n下载与安装 VS Code\r打开 VS Code 下载页面，根据你使用的操作系统选择合适的安装包\n打开安装包根据安装提示进行安装\n配置VS Code\r安装完毕之后，在桌面双击打开 Visual Studio Code，分别搜索并安装以下插件：\n">
+<meta property='og:url' content='https://demo.stack.cai.im/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/'>
+<meta property='og:site_name' content='咕咕不是鸽鸽'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='教程' /><meta property='article:published_time' content='2026-04-30T18:42:46&#43;08:00'/><meta property='article:modified_time' content='2026-04-30T18:42:46&#43;08:00'/>
+<meta name="twitter:title" content="使用Hugo搭建一个属于你自己的博客">
+<meta name="twitter:description" content="\n搭建博客\r💡\r提示\r因为hugo.Extended效果比hugo强，所以下文统一使用hugo.Extended\n准备工作\r安装VS Code\rVS Code 是微软官方免费开源的文本编辑器，支持 Windows、macOS 和 Linux 三大平台。\n下载与安装 VS Code\r打开 VS Code 下载页面，根据你使用的操作系统选择合适的安装包\n打开安装包根据安装提示进行安装\n配置VS Code\r安装完毕之后，在桌面双击打开 Visual Studio Code，分别搜索并安装以下插件：\n">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/212193102?v=4" />
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="https://avatars.githubusercontent.com/u/212193102?v=4" 
+                        width="460"
+                        height="460"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">✨</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">咕咕不是鸽鸽</a></h1>
+            <h2 class="site-description">莫愁前路无知己，天下谁人不识君？</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    <li id="i18n-switch">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                        <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <option value="/en/" >English</option>
+                            
+                                
+                                
+                                    
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <option value="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" selected>简体中文</option>
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                        
+                                    
+                                
+                                    
+                                
+                                <option value="/zh-hant-tw/p/%E4%BD%BF%E7%94%A8-hugo-%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/" >正體中文</option>
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                    
+                                
+                                <option value="/ja/p/hugo%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/" >日本語</option>
+                            
+                        </select>
+                    </li>
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li><a href="#准备工作">准备工作</a>
+      <ol>
+        <li><a href="#安装vs-code">安装VS Code</a>
+          <ol>
+            <li><a href="#下载与安装-vs-code">下载与安装 VS Code</a></li>
+            <li><a href="#配置vs-code">配置VS Code</a></li>
+          </ol>
+        </li>
+        <li><a href="#安装-git">安装 Git</a>
+          <ol>
+            <li><a href="#下载并安装-git">下载并安装 Git</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置-github">配置 GitHub</a>
+          <ol>
+            <li><a href="#注册-github-账号">注册 GitHub 账号</a></li>
+            <li><a href="#新建项目">新建项目</a></li>
+            <li><a href="#配置-ssh-密钥">配置 SSH 密钥</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#安装-hugo">安装 Hugo</a>
+      <ol>
+        <li><a href="#windows-系统安装-hugo">Windows 系统安装 Hugo</a>
+          <ol>
+            <li><a href="#使用微软官方的-windows-软件包管理器-winget">使用微软官方的 Windows 软件包管理器 winget</a></li>
+            <li><a href="#使用-github-上已编译好的-二进制文件">使用 GitHub 上已编译好的 二进制文件</a></li>
+          </ol>
+        </li>
+        <li><a href="#linux-系统安装-hugo">Linux 系统安装 Hugo</a>
+          <ol>
+            <li><a href="#使用包管理器安装">使用包管理器安装</a></li>
+            <li><a href="#使用编译好的二进制文件安装">使用编译好的二进制文件安装</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#编辑项目">编辑项目</a>
+      <ol>
+        <li><a href="#进入项目">进入项目</a></li>
+        <li><a href="#修改项目">修改项目</a></li>
+        <li><a href="#添加文章">添加文章</a></li>
+      </ol>
+    </li>
+    <li><a href="#部署网站">部署网站</a>
+      <ol>
+        <li><a href="#生成静态网页">生成静态网页</a></li>
+        <li><a href="#推送项目">推送项目</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">
+            <a href="/archives/">
+                归档
+            </a>
+        </h2>
+
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2026">
+                        
+                            <span class="year">2026</span>
+                            <span class="count">2</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/hugo/" style="background-color: hsl(244, 60%, 84%); color: hsl(244, 60%, 15%);">
+                Hugo
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">使用Hugo搭建一个属于你自己的博客</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-04-30T18:42:46&#43;08:00'>2026-04-30</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                
+            </div>
+        
+
+        
+            <div class="inline-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                
+                    <a href="/zh-hant-tw/p/%E4%BD%BF%E7%94%A8-hugo-%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/" class="link">正體中文</a>
+                
+                    <a href="/ja/p/hugo%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/" class="link">日本語</a>
+                
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li><a href="#准备工作">准备工作</a>
+      <ol>
+        <li><a href="#安装vs-code">安装VS Code</a>
+          <ol>
+            <li><a href="#下载与安装-vs-code">下载与安装 VS Code</a></li>
+            <li><a href="#配置vs-code">配置VS Code</a></li>
+          </ol>
+        </li>
+        <li><a href="#安装-git">安装 Git</a>
+          <ol>
+            <li><a href="#下载并安装-git">下载并安装 Git</a></li>
+          </ol>
+        </li>
+        <li><a href="#配置-github">配置 GitHub</a>
+          <ol>
+            <li><a href="#注册-github-账号">注册 GitHub 账号</a></li>
+            <li><a href="#新建项目">新建项目</a></li>
+            <li><a href="#配置-ssh-密钥">配置 SSH 密钥</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#安装-hugo">安装 Hugo</a>
+      <ol>
+        <li><a href="#windows-系统安装-hugo">Windows 系统安装 Hugo</a>
+          <ol>
+            <li><a href="#使用微软官方的-windows-软件包管理器-winget">使用微软官方的 Windows 软件包管理器 winget</a></li>
+            <li><a href="#使用-github-上已编译好的-二进制文件">使用 GitHub 上已编译好的 二进制文件</a></li>
+          </ol>
+        </li>
+        <li><a href="#linux-系统安装-hugo">Linux 系统安装 Hugo</a>
+          <ol>
+            <li><a href="#使用包管理器安装">使用包管理器安装</a></li>
+            <li><a href="#使用编译好的二进制文件安装">使用编译好的二进制文件安装</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#编辑项目">编辑项目</a>
+      <ol>
+        <li><a href="#进入项目">进入项目</a></li>
+        <li><a href="#修改项目">修改项目</a></li>
+        <li><a href="#添加文章">添加文章</a></li>
+      </ol>
+    </li>
+    <li><a href="#部署网站">部署网站</a>
+      <ol>
+        <li><a href="#生成静态网页">生成静态网页</a></li>
+        <li><a href="#推送项目">推送项目</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p><img alt="博客首页展示" class="gallery-image" data-flex-basis="422px" data-flex-grow="176" height="1818" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/index.jpg" width="3200"></p>
+<!-- ![文章内容展示](img1.jpg) -->
+<h1 id="搭建博客"><a href="#%e6%90%ad%e5%bb%ba%e5%8d%9a%e5%ae%a2" class="header-anchor"></a>搭建博客
+</h1><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>因为hugo.Extended效果比hugo强，所以下文统一使用hugo.Extended</p>
+        </div>
+    </blockquote>
+<h2 id="准备工作"><a href="#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c" class="header-anchor"></a>准备工作
+</h2><h3 id="安装vs-code"><a href="#%e5%ae%89%e8%a3%85vs-code" class="header-anchor"></a>安装VS Code
+</h3><p>VS Code 是微软官方免费开源的文本编辑器，支持 Windows、macOS 和 Linux 三大平台。</p>
+<h4 id="下载与安装-vs-code"><a href="#%e4%b8%8b%e8%bd%bd%e4%b8%8e%e5%ae%89%e8%a3%85-vs-code" class="header-anchor"></a>下载与安装 VS Code
+</h4><p>打开 <a class="link" href="https://code.visualstudio.com/Download"  target="_blank" rel="noopener"
+    >VS Code 下载页面</a>，根据你使用的操作系统选择合适的安装包</p>
+<p><img alt="VS Code下载页面" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeDownload.jpg" width="3200"></p>
+<p>打开安装包根据安装提示进行安装</p>
+<p><img alt="VS Code安装界面" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeInstall.jpg" width="3200"></p>
+<h4 id="配置vs-code"><a href="#%e9%85%8d%e7%bd%aevs-code" class="header-anchor"></a>配置VS Code
+</h4><p>安装完毕之后，在桌面双击打开 Visual Studio Code，分别搜索并安装以下插件：</p>
+<p><img alt="汉化插件Chinese" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChinese.jpg" width="3200">  <img alt="toml语法高亮插件toml" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeToml.jpg" width="3200">  <img alt="html文件实时预览插件live" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeLiveServer.jpg" width="3200"></p>
+<p>安装完成之后重启 VS Code，此时整个软件界面就会汉化为中文</p>
+<p><img alt="汉化后的VS Code" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChineseImg.jpg" width="3200"></p>
+<h3 id="安装-git"><a href="#%e5%ae%89%e8%a3%85-git" class="header-anchor"></a>安装 Git
+</h3>
+    <blockquote>
+        <p>Git 是一个分布式版本控制软件系统，能够管理源代码或数据的版本。它通常用于协作开发软件的程序员控制源代码<br>
+— <cite>摘抄自 <a class="link" href="https://en.wikipedia.org/wiki/Git"  target="_blank" rel="noopener"
+    >维基百科</a></cite></p>
+
+    </blockquote>
+<h4 id="下载并安装-git"><a href="#%e4%b8%8b%e8%bd%bd%e5%b9%b6%e5%ae%89%e8%a3%85-git" class="header-anchor"></a>下载并安装 Git
+</h4><p>打开 <a class="link" href="https://git-scm.com/install/windows"  target="_blank" rel="noopener"
+    >Git 下载页面</a>，选择适合你操作系统的安装包下载</p>
+<p><img alt="git下载页面" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitDownload.jpg" width="3200"></p>
+<p>打开 Git 安装包，点击 &ldquo;Next&rdquo; 来到以下界面，按照图示勾选后完成安装</p>
+<p><img alt="git安装图示" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitInstall.jpg" width="3200"></p>
+<h3 id="配置-github"><a href="#%e9%85%8d%e7%bd%ae-github" class="header-anchor"></a>配置 GitHub
+</h3><h4 id="注册-github-账号"><a href="#%e6%b3%a8%e5%86%8c-github-%e8%b4%a6%e5%8f%b7" class="header-anchor"></a>注册 GitHub 账号
+</h4><p>打开 <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHub 主页</a>，点击 &ldquo;Sign up&rdquo;，根据你的真实信息填写，完成注册</p>
+<p><img alt="Github主页" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="1998" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp.jpg" width="3198">  <img alt="Github注册页面" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp1.jpg" width="3200"></p>
+<h4 id="新建项目"><a href="#%e6%96%b0%e5%bb%ba%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>新建项目
+</h4><p><a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >来到 GitHub 主页</a>，点击 &ldquo;New&rdquo; <a class="link" href="https://github.com/new"  target="_blank" rel="noopener"
+    >新建一个空仓库</a>，&ldquo;Repository name&rdquo; 填写「你的 GitHub 用户名.github.io」，&ldquo;Description&rdquo; 填写你对该项目的描述，同时勾选 &ldquo;Add a README file&rdquo;</p>
+<p><img alt="新建空仓库" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newRepositories.jpg" width="3200">  <img class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createNewRepository.jpg" width="3200"></p>
+<h4 id="配置-ssh-密钥"><a href="#%e9%85%8d%e7%bd%ae-ssh-%e5%af%86%e9%92%a5" class="header-anchor"></a>配置 SSH 密钥
+</h4><p>在开始菜单中搜索 &ldquo;Git Bash&rdquo; 并打开，或者在桌面空白处右键点击，选择 &ldquo;Open Git Bash Here&rdquo;</p>
+<p><img alt="右键桌面空白处" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/desktopGitBash.jpg" width="3200"></p>
+<p>运行以下命令（将 <code>your_email@example.com</code> 替换为你的邮箱地址），如果询问是否确认，直接回车即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;
+</span></span><span class="line"><span class="cl">cat ~/.ssh/id*.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>把第二条命令输出的文本复制下来，打开 <a class="link" href="https://github.com/settings/ssh/new"  target="_blank" rel="noopener"
+    >SSH 密钥设置页面</a>，在 &ldquo;Title&rdquo; 里填写一个名称（如 &ldquo;我的工作电脑&rdquo;），&ldquo;Key type&rdquo; 保持默认不变，将复制的公钥文本粘贴到 &ldquo;Key&rdquo; 框中</p>
+<blockquote class="alert alert-important">
+        <div class="alert-header">
+            <span class="alert-icon">📌</span>
+            <span class="alert-title">重要</span>
+        </div>
+        <div class="alert-body">
+            <p>密钥最后面不能有空格！</p>
+        </div>
+    </blockquote>
+<p><img alt="新建ssh密钥" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newSSH-key.jpg" width="3200"></p>
+<p>最后在终端测试 SSH 连通性，出现 <code>xxx! You've successfully authenticated, but GitHub does not provide shell access.</code> 即表示连接成功</p>
+<p><img alt="测试ssh连通性" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/sshTest.jpg" width="3200"></p>
+<h2 id="安装-hugo"><a href="#%e5%ae%89%e8%a3%85-hugo" class="header-anchor"></a>安装 Hugo
+</h2><h3 id="windows-系统安装-hugo"><a href="#windows-%e7%b3%bb%e7%bb%9f%e5%ae%89%e8%a3%85-hugo" class="header-anchor"></a>Windows 系统安装 Hugo
+</h3><h4 id="使用微软官方的-windows-软件包管理器-winget"><a href="#%e4%bd%bf%e7%94%a8%e5%be%ae%e8%bd%af%e5%ae%98%e6%96%b9%e7%9a%84-windows-%e8%bd%af%e4%bb%b6%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8-winget" class="header-anchor"></a>使用微软官方的 Windows 软件包管理器 winget
+</h4><ul>
+<li><strong>安装 Hugo Extended</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget install Hugo.Hugo.Extended
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>卸载 Hugo Extended</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget uninstall --name &#34;Hugo (Extended)&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="使用-github-上已编译好的-二进制文件"><a href="#%e4%bd%bf%e7%94%a8-github-%e4%b8%8a%e5%b7%b2%e7%bc%96%e8%af%91%e5%a5%bd%e7%9a%84-%e4%ba%8c%e8%bf%9b%e5%88%b6%e6%96%87%e4%bb%b6" class="header-anchor"></a>使用 GitHub 上已编译好的 <a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >二进制文件</a>
+</h4><p>下载 <code>hugo_extended_x.xxx.x_windows-amd64.zip</code>，解压后 <a class="link" href="https://zhuanlan.zhihu.com/p/646247339"  target="_blank" rel="noopener"
+    >配置环境变量</a></p>
+<p><img alt="Windows操作系统所需软件包" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugoExtendedDownload.jpg" width="3200"></p>
+<h3 id="linux-系统安装-hugo"><a href="#linux-%e7%b3%bb%e7%bb%9f%e5%ae%89%e8%a3%85-hugo" class="header-anchor"></a>Linux 系统安装 Hugo
+</h3><h4 id="使用包管理器安装"><a href="#%e4%bd%bf%e7%94%a8%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8%e5%ae%89%e8%a3%85" class="header-anchor"></a>使用包管理器安装
+</h4><ul>
+<li>
+<p><strong>Ubuntu/Debian 系统</strong></p>
+<ul>
+<li>使用 apt 包管理器安装 Hugo Extended</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Fedora 系统</strong></p>
+<ul>
+<li>使用 dnf 包管理器安装</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Arch Linux 系统</strong></p>
+<ul>
+<li>使用 pacman 包管理器安装</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="使用编译好的二进制文件安装"><a href="#%e4%bd%bf%e7%94%a8%e7%bc%96%e8%af%91%e5%a5%bd%e7%9a%84%e4%ba%8c%e8%bf%9b%e5%88%b6%e6%96%87%e4%bb%b6%e5%ae%89%e8%a3%85" class="header-anchor"></a>使用编译好的二进制文件安装
+</h4><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>这种方法可以获取最新版本的 Hugo，特别是 Extended 版本</p>
+        </div>
+    </blockquote>
+<ol>
+<li>
+<p>打开 <a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >Hugo Releases 页面</a>，下载适合你系统的文件：</p>
+<ul>
+<li>64 位系统：下载 <code>hugo_extended_x.xxx.x_linux-amd64.tar.gz</code></li>
+<li>32 位系统：下载 <code>hugo_extended_x.xxx.x_linux-386.tar.gz</code></li>
+<li>ARM 架构：下载对应的 <code>hugo_extended_x.xxx.x_linux-arm64.tar.gz</code></li>
+</ul>
+</li>
+<li>
+<p>打开终端，进入下载文件的目录：</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> 文件所在路径
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>解压文件：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -zxvf hugo_extended_x.xxx.x_linux-amd64.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>将 Hugo 可执行文件移动到系统路径：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mv hugo /usr/local/bin/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>验证是否安装成功：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果输出类似于 <code>hugo v0.160.1-d6bc8165e62b29d7d70ede01ed01d0f88de327e6+extended xxx/amd64 BuildDate=2026-04-08T14:02:42Z VendorInfo=gohugoio</code> 即表示安装成功</p>
+<h2 id="编辑项目"><a href="#%e7%bc%96%e8%be%91%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>编辑项目
+</h2><h3 id="进入项目"><a href="#%e8%bf%9b%e5%85%a5%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>进入项目
+</h3><ul>
+<li>创建一个空白的英文文件夹</li>
+<li>打开 VS Code，点击「打开文件夹&hellip;」，选择你刚才创建的文件夹</li>
+</ul>
+<p><img alt="VS Code 打开文件夹" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeOpenFolder.jpg" width="3200"></p>
+<p>按下快捷键 <code>Ctrl + J</code> 打开终端，克隆 <a class="link" href="https://github.com/GuGuIsNotAPigeon/hugo-theme-stack"  target="_blank" rel="noopener"
+    >我的项目</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>国内用户优先使用第二条命令</p>
+        </div>
+    </blockquote>
+<p><strong>Windows 用户</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Linux/macOS 用户</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="修改项目"><a href="#%e4%bf%ae%e6%94%b9%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>修改项目
+</h3><ul>
+<li>在左侧的资源管理器中打开 <code>config\_default\languages.toml</code>，将 <code>title</code> 后面的内容修改为你的昵称，<code>subtitle</code> 后填写副标题</li>
+<li>打开 <code>config\_default\params.toml</code>，在 <code>[sidebar]</code> 下的 <code>avatar</code> 中修改你的头像链接</li>
+<li>其他文件的修改可查看原作者的 <a class="link" href="https://stack.cai.im/zh/guide/"  target="_blank" rel="noopener"
+    >教程</a>，需要根据实际情况进行调整</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>无论是文字还是链接，都需要在英文双引号内修改</p>
+        </div>
+    </blockquote>
+<ul>
+<li>在终端运行以下命令，按住 <code>Ctrl</code> 键并单击 <code>http://localhost:xxxx</code> 即可在浏览器中预览网站：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo serve -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="添加文章"><a href="#%e6%b7%bb%e5%8a%a0%e6%96%87%e7%ab%a0" class="header-anchor"></a>添加文章
+</h3><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>文章目录是为了更好地分类文章，推荐使用英文作为目录名称</p>
+        </div>
+    </blockquote>
+<ul>
+<li>Windows 用户在终端运行以下脚本：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.\newPost.bat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Linux/macOS 用户运行以下命令：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">chmod +x ./newPost.sh
+</span></span><span class="line"><span class="cl">./newPost.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>打开对应目录的 <code>index.zh.md</code>，修改以下内容：</p>
+<ul>
+<li><code>title</code>：文章标题</li>
+<li><code>description</code>：文章描述</li>
+<li><code>image</code>：文章封面图片地址（可使用相对路径）</li>
+<li><code>comments</code>：开关评论区（开：<code>true</code>，关：<code>false</code>）</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>请将 <code>draft: true</code> 改为 <code>draft: false</code></p>
+        </div>
+    </blockquote>
+<p>文章内容编写可查看原作者的 <a class="link" href="https://demo.stack.cai.im/zh/p/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/"  target="_blank" rel="noopener"
+    >Markdown 语法指南</a></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>运行 <code>hugo serve -D</code> 命令可实时查看文章修改情况</p>
+        </div>
+    </blockquote>
+<h2 id="部署网站"><a href="#%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99" class="header-anchor"></a>部署网站
+</h2><h3 id="生成静态网页"><a href="#%e7%94%9f%e6%88%90%e9%9d%99%e6%80%81%e7%bd%91%e9%a1%b5" class="header-anchor"></a>生成静态网页
+</h3><p>文章写完之后，在项目根目录运行以下命令生成静态网页：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时 <code>public</code> 文件夹中会出现许多文件，接着运行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git config --global --add safe.directory 你项目的绝对路径/public
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/你的GitHub用户名/用户名.github.io.git
+</span></span><span class="line"><span class="cl">git checkout -b main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git config --global user.email &#34;你的GitHub绑定的邮箱地址&#34;
+</span></span><span class="line"><span class="cl">git config --global user.name &#34;GitHub用户名&#34;
+</span></span><span class="line"><span class="cl">git commit -m &#34;你的提交信息&#34;
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="推送项目"><a href="#%e6%8e%a8%e9%80%81%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>推送项目
+</h3><p>打开你的 GitHub 仓库，点击「Settings」→「Pages」，在「Branch」中将「None」更改为「main」，点击「Save」</p>
+<p>等待 GitHub 部署完毕，之后就可以通过以下地址访问你的博客<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>：</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>该项目是基于 Jimmy 大佬设计的 Stack 主题用 AI 二改的&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>地址为 https://你的GitHub用户名.github.io&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const elementsToRender = [".main-article", ".widget--toc"];
+
+        elementsToRender.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                renderMathInElement(element, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+                    ],
+                    ignoredClasses: ["gist"]
+                });
+            }
+        });
+    });
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+        <div id="comments-consent-placeholder" class="consent-placeholder">
+            <p>评论已禁用，直到您接受功能性 Cookie。</p>
+            <button class="cookie-btn cookie-btn--primary" data-cookie-action="reopen">
+                管理偏好设置
+            </button>
+        </div>
+        <div id="comments-container" style="display: none;">
+            <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+        </div>
+        <script>
+        (function() {
+            var placeholder = document.getElementById('comments-consent-placeholder');
+            var container = document.getElementById('comments-container');
+
+            function showComments() {
+                if (placeholder) placeholder.style.display = 'none';
+                if (container) container.style.display = 'block';
+            }
+
+            function hideComments() {
+                if (placeholder) placeholder.style.display = 'block';
+                if (container) container.style.display = 'none';
+            }
+
+            window.addEventListener('onCookieConsentChange', function(e) {
+                if (e.detail && e.detail.functional) {
+                    showComments();
+                } else {
+                    hideComments();
+                }
+            });
+
+            
+            if (window.cookieConsent && window.cookieConsent.hasConsent('functional')) {
+                showComments();
+            }
+        })();
+        </script>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 咕咕不是鸽鸽
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+    <div id="cookie-consent-banner" class="cookie-banner" aria-hidden="true" role="dialog" aria-labelledby="cookie-banner-title">
+    <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+            <strong id="cookie-banner-title">Cookie 同意</strong>
+            <p>我们使用 Cookie 来增强您的浏览体验并分析网站流量。</p>
+        </div>
+
+        <div class="cookie-banner__actions">
+            <button class="cookie-btn cookie-btn--secondary" data-cookie-action="deny">
+                拒绝
+            </button>
+            <button class="cookie-btn cookie-btn--primary" data-cookie-action="accept">
+                接受所有
+            </button>
+        </div>
+
+        
+        <div id="cookie-settings-panel" class="cookie-settings" aria-hidden="true">
+            <h3>Cookie 偏好设置</h3>
+
+            <div class="cookie-category">
+                <label>
+                    <input type="checkbox" name="necessary" checked disabled />
+                    <strong>必要</strong>
+                </label>
+                <p>这些 Cookie 是网站运行所必需的，无法禁用。</p>
+            </div><div class="cookie-category">
+                <label>
+                    <input type="checkbox" name="analytics" data-cookie-category="analytics" />
+                    <strong>分析</strong>
+                </label>
+                <p>这些 Cookie 帮助我们了解访问者如何与我们的网站互动。</p>
+            </div><div class="cookie-category">
+                <label>
+                    <input type="checkbox" name="functional" data-cookie-category="functional" />
+                    <strong>功能性</strong>
+                </label>
+                <p>这些 Cookie 启用评论和嵌入内容等功能.</p>
+            </div><div class="cookie-settings__actions">
+                <button class="cookie-btn cookie-btn--secondary" data-cookie-action="cancel">
+                    取消
+                </button>
+                <button class="cookie-btn cookie-btn--primary" data-cookie-action="save">
+                    保存偏好设置
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="/ts/cookies.6d3577f211db9f4f1997385d4b417cf90130b050bc9e787bb1bb5346d337e998.js" defer></script>
+<script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
+
+
+    </body>
+</html>

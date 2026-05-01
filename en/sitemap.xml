@@ -5,7 +5,7 @@
     <loc>https://demo.stack.cai.im/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
+                hreflang="zh"
                 href="https://demo.stack.cai.im/categories/"
                 />
     <xhtml:link
@@ -27,7 +27,7 @@
     <loc>https://demo.stack.cai.im/en/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
+                hreflang="zh"
                 href="https://demo.stack.cai.im/"
                 />
     <xhtml:link
@@ -49,7 +49,7 @@
     <loc>https://demo.stack.cai.im/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
+                hreflang="zh"
                 href="https://demo.stack.cai.im/tags/"
                 />
     <xhtml:link

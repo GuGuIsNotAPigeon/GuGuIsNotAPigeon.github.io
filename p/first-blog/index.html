@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="第一个正式的博客站捏~">
 <title>First Blog</title>
@@ -277,7 +277,7 @@
                     <a href="/archives/#2026">
                         
                             <span class="year">2026</span>
-                            <span class="count">1</span>
+                            <span class="count">2</span>
                         
                     </a> 
                 </div>
@@ -454,6 +454,86 @@
     
 
      
+    
+        
+        <div id="comments-consent-placeholder" class="consent-placeholder">
+            <p>评论已禁用，直到您接受功能性 Cookie。</p>
+            <button class="cookie-btn cookie-btn--primary" data-cookie-action="reopen">
+                管理偏好设置
+            </button>
+        </div>
+        <div id="comments-container" style="display: none;">
+            <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+        </div>
+        <script>
+        (function() {
+            var placeholder = document.getElementById('comments-consent-placeholder');
+            var container = document.getElementById('comments-container');
+
+            function showComments() {
+                if (placeholder) placeholder.style.display = 'none';
+                if (container) container.style.display = 'block';
+            }
+
+            function hideComments() {
+                if (placeholder) placeholder.style.display = 'block';
+                if (container) container.style.display = 'none';
+            }
+
+            window.addEventListener('onCookieConsentChange', function(e) {
+                if (e.detail && e.detail.functional) {
+                    showComments();
+                } else {
+                    hideComments();
+                }
+            });
+
+            
+            if (window.cookieConsent && window.cookieConsent.hasConsent('functional')) {
+                showComments();
+            }
+        })();
+        </script>
     
 
     <footer class="site-footer">
