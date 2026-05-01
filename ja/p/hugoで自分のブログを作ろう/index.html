@@ -17,9 +17,10 @@
 <meta property='og:description' content="\nブログを作ろう\r💡\rヒント\rHugo.Extendedは標準のHugoより機能が多いため、このガイドではHugo.Extendedを使用します。\n">
 <meta property='og:url' content='https://guguisnotapigeon.github.io/ja/p/hugo%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/'>
 <meta property='og:site_name' content='GuGuIsNotPigeon'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='チュートリアル' /><meta property='article:published_time' content='2026-04-30T18:42:53&#43;08:00'/><meta property='article:modified_time' content='2026-04-30T18:42:53&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='チュートリアル' /><meta property='article:tag' content='静的サイト' /><meta property='article:tag' content='オープンソース' /><meta property='article:published_time' content='2026-04-30T18:42:53&#43;08:00'/><meta property='article:modified_time' content='2026-04-30T18:42:53&#43;08:00'/><meta property='og:image' content='https://guguisnotapigeon.github.io/' />
 <meta name="twitter:title" content="Hugoで自分のブログを作ろう">
-<meta name="twitter:description" content="\nブログを作ろう\r💡\rヒント\rHugo.Extendedは標準のHugoより機能が多いため、このガイドではHugo.Extendedを使用します。\n">
+<meta name="twitter:description" content="\nブログを作ろう\r💡\rヒント\rHugo.Extendedは標準のHugoより機能が多いため、このガイドではHugo.Extendedを使用します。\n"><meta name="twitter:card" content="">
+    <meta name="twitter:image" content='https://guguisnotapigeon.github.io/' />
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/212193102?v=4" />
 <style>
      
@@ -316,7 +317,52 @@
     <li><a href="#ウェブサイトをデプロイする">ウェブサイトをデプロイする</a>
       <ol>
         <li><a href="#静的ページを生成する">静的ページを生成する</a></li>
-        <li><a href="#プロジェクトをプッシュする">プロジェクトをプッシュする</a></li>
+        <li><a href="#プロジェクトをプッシュする">プロジェクトをプッシュする</a>
+          <ol>
+            <li><a href="#vs-codeの設定-1">VS Codeの設定</a></li>
+          </ol>
+        </li>
+        <li><a href="#gitのインストール-1">Gitのインストール</a>
+          <ol>
+            <li><a href="#gitのダウンロードとインストール-1">Gitのダウンロードとインストール</a></li>
+          </ol>
+        </li>
+        <li><a href="#githubの設定-1">GitHubの設定</a>
+          <ol>
+            <li><a href="#githubアカウントを登録する-1">GitHubアカウントを登録する</a></li>
+            <li><a href="#新規リポジトリを作成する-1">新規リポジトリを作成する</a></li>
+            <li><a href="#ssh鍵を設定する-1">SSH鍵を設定する</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#hugoのインストール-1">Hugoのインストール</a>
+      <ol>
+        <li><a href="#windowsにhugoをインストールする-1">WindowsにHugoをインストールする</a>
+          <ol>
+            <li><a href="#microsoftのwindowsパッケージマネージャーwingetを使用する-1">MicrosoftのWindowsパッケージマネージャーwingetを使用する</a></li>
+            <li><a href="#githubのコンパイル済みバイナリを使用する-1">GitHubのコンパイル済みバイナリを使用する</a></li>
+          </ol>
+        </li>
+        <li><a href="#linuxにhugoをインストールする-1">LinuxにHugoをインストールする</a>
+          <ol>
+            <li><a href="#パッケージマネージャーを使用する-1">パッケージマネージャーを使用する</a></li>
+            <li><a href="#コンパイル済みバイナリを使用する-1">コンパイル済みバイナリを使用する</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#プロジェクトを編集する-1">プロジェクトを編集する</a>
+      <ol>
+        <li><a href="#プロジェクトに入る-1">プロジェクトに入る</a></li>
+        <li><a href="#プロジェクトを変更する-1">プロジェクトを変更する</a></li>
+        <li><a href="#記事を追加する-1">記事を追加する</a></li>
+      </ol>
+    </li>
+    <li><a href="#ウェブサイトをデプロイする-1">ウェブサイトをデプロイする</a>
+      <ol>
+        <li><a href="#静的ページを生成する-1">静的ページを生成する</a></li>
+        <li><a href="#プロジェクトをプッシュする-1">プロジェクトをプッシュする</a></li>
       </ol>
     </li>
   </ol>
@@ -365,8 +411,14 @@
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+    <div class="article-image">
+        <a href="/ja/p/hugo%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/">
+            <img alt="Featured image of post Hugoで自分のブログを作ろう" height="1000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo_01.png" width="3000">
+        </a>
+    </div>
+    
 
     <div class="article-details">
     
@@ -377,6 +429,20 @@
             
             <a href="/ja/categories/hugo/" style="background-color: hsl(244, 60%, 84%); color: hsl(244, 60%, 15%);">
                 Hugo
+            </a>
+        
+            
+            
+            
+            <a href="/ja/categories/vs-code/" style="background-color: hsl(15, 60%, 84%); color: hsl(15, 60%, 15%);">
+                VS Code
+            </a>
+        
+            
+            
+            
+            <a href="/ja/categories/git/" style="background-color: hsl(203, 60%, 84%); color: hsl(203, 60%, 15%);">
+                Git
             </a>
         
     </header>
@@ -423,7 +489,7 @@
 
 
                     <time class="article-time--reading">
-                        読了時間: 7分
+                        読了時間: 13分
                     </time>
                 
             </div>
@@ -517,7 +583,52 @@
     <li><a href="#ウェブサイトをデプロイする">ウェブサイトをデプロイする</a>
       <ol>
         <li><a href="#静的ページを生成する">静的ページを生成する</a></li>
-        <li><a href="#プロジェクトをプッシュする">プロジェクトをプッシュする</a></li>
+        <li><a href="#プロジェクトをプッシュする">プロジェクトをプッシュする</a>
+          <ol>
+            <li><a href="#vs-codeの設定-1">VS Codeの設定</a></li>
+          </ol>
+        </li>
+        <li><a href="#gitのインストール-1">Gitのインストール</a>
+          <ol>
+            <li><a href="#gitのダウンロードとインストール-1">Gitのダウンロードとインストール</a></li>
+          </ol>
+        </li>
+        <li><a href="#githubの設定-1">GitHubの設定</a>
+          <ol>
+            <li><a href="#githubアカウントを登録する-1">GitHubアカウントを登録する</a></li>
+            <li><a href="#新規リポジトリを作成する-1">新規リポジトリを作成する</a></li>
+            <li><a href="#ssh鍵を設定する-1">SSH鍵を設定する</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#hugoのインストール-1">Hugoのインストール</a>
+      <ol>
+        <li><a href="#windowsにhugoをインストールする-1">WindowsにHugoをインストールする</a>
+          <ol>
+            <li><a href="#microsoftのwindowsパッケージマネージャーwingetを使用する-1">MicrosoftのWindowsパッケージマネージャーwingetを使用する</a></li>
+            <li><a href="#githubのコンパイル済みバイナリを使用する-1">GitHubのコンパイル済みバイナリを使用する</a></li>
+          </ol>
+        </li>
+        <li><a href="#linuxにhugoをインストールする-1">LinuxにHugoをインストールする</a>
+          <ol>
+            <li><a href="#パッケージマネージャーを使用する-1">パッケージマネージャーを使用する</a></li>
+            <li><a href="#コンパイル済みバイナリを使用する-1">コンパイル済みバイナリを使用する</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#プロジェクトを編集する-1">プロジェクトを編集する</a>
+      <ol>
+        <li><a href="#プロジェクトに入る-1">プロジェクトに入る</a></li>
+        <li><a href="#プロジェクトを変更する-1">プロジェクトを変更する</a></li>
+        <li><a href="#記事を追加する-1">記事を追加する</a></li>
+      </ol>
+    </li>
+    <li><a href="#ウェブサイトをデプロイする-1">ウェブサイトをデプロイする</a>
+      <ol>
+        <li><a href="#静的ページを生成する-1">静的ページを生成する</a></li>
+        <li><a href="#プロジェクトをプッシュする-1">プロジェクトをプッシュする</a></li>
       </ol>
     </li>
   </ol>
@@ -556,6 +667,8 @@
 <p><img alt="中国語言語パック" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChinese.jpg" width="3200">  <img alt="TOML構文ハイライト" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeToml.jpg" width="3200">  <img alt="HTMLライブプレビュー" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeLiveServer.jpg" width="3200"></p>
 <p>インストール後、VS Codeを再起動すると、ソフトウェア全体が中文で表示されます。</p>
 <p><img alt="中文表示のVS Code" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChineseImg.jpg" width="3200"></p>
+<p>最後に「ファイル」をクリックして「自動保存」を有効にします。</p>
+<p><img alt="自動保存" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/autoSave.jpg" width="1600"></p>
 <h3 id="gitのインストール"><a href="#git%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" class="header-anchor"></a>Gitのインストール
 </h3>
     <blockquote>
@@ -581,7 +694,7 @@
     >新しいリポジトリ</a>を作成し、「Repository name」に「あなたのGitHubユーザー名.github.io」を入力し、「Description」にプロジェクトの説明を入力し、「Add a README file」にチェックを入れてください。</p>
 <p><img alt="新規リポジトリ作成" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newRepositories.jpg" width="3200">  <img class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createNewRepository.jpg" width="3200"></p>
 <h4 id="ssh鍵を設定する"><a href="#ssh%e9%8d%b5%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%99%e3%82%8b" class="header-anchor"></a>SSH鍵を設定する
-</h4><p>スタートメニューで「Git Bash」を検索して開くか、デスクトップの空白处を右クリックし、「Open Git Bash Here」を選択してください。</p>
+</h4><p>スタートメニューで「Git Bash」を検索して開くか、デスクトップの空白處を右クリックし、「Open Git Bash Here」を選択してください。</p>
 <p><img alt="デスクトップでGit Bashを開く" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/desktopGitBash.jpg" width="3200"></p>
 <p>以下のコマンドを実行します（<code>your_email@example.com</code>をあなたのメールアドレスに置き換えてください）。確認を求められたらEnterを押してください：</p>
 <div class="highlight"><div class="chroma">
@@ -703,7 +816,7 @@
 <ul>
 <li>64ビットシステム：<code>hugo_extended_x.xxx.x_linux-amd64.tar.gz</code></li>
 <li>32ビットシステム：<code>hugo_extended_x.xxx.x_linux-386.tar.gz</code></li>
-<li>ARMアーキテクチャ： соответствующий <code>hugo_extended_x.xxx.x_linux-arm64.tar.gz</code></li>
+<li>ARMアーキテクチャ：対応する <code>hugo_extended_x.xxx.x_linux-arm64.tar.gz</code></li>
 </ul>
 </li>
 <li>
@@ -792,7 +905,406 @@
 </span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="プロジェクトを変更する"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b" class="header-anchor"></a>プロジェクトを変更する
+</div><p><img alt="プロジェクトをクローン" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitClone.jpg" width="1600"></p>
+<h3 id="プロジェクトを変更する"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b" class="header-anchor"></a>プロジェクトを変更する
+</h3><ul>
+<li>左側のエクスプローラーで<code>config\_default\languages.toml</code>を開き、<code>title</code>の後の内容をあなたのニックネームに変更し、<code>subtitle</code>の後にサブタイトルを入力</li>
+<li><code>config\_default\params.toml</code>を開き、<code>[sidebar]</code>の下の<code>avatar</code>でアバターリンクを変更</li>
+<li><code>config\_default\hugo.toml</code>を開き、<code>baseURL = &quot;https://guguisnotapigeon.github.io/&quot;</code>を<code>https://あなたのGitHubユーザー名.github.io</code>に変更</li>
+</ul>
+<p><img alt="languages.toml" class="gallery-image" data-flex-basis="425px" data-flex-grow="177" height="899" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/languagesToml.jpg" width="1595">  <img alt="params.toml" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/paramsToml.jpg" width="1600">  <img alt="hugo.toml" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugoToml.jpg" width="1600"></p>
+<ul>
+<li>他のファイルの変更については、元の作成者の<a class="link" href="https://stack.cai.im/ja/guide/"  target="_blank" rel="noopener"
+    >チュートリアル</a>を参照し、実際の状況に応じて調整してください</li>
+</ul>
+<p><img alt="Stack公式チュートリアル" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stackWeb.jpg" width="1600"></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">ヒント</span>
+        </div>
+        <div class="alert-body">
+            <p>テキストやリンクに関係なく、英数字ダブルクォーテーション内で変更する必要があります</p>
+        </div>
+    </blockquote>
+<ul>
+<li>ターミナルで以下のコマンドを実行し、<code>Ctrl</code>キーを押しながら<code>http://localhost:xxxx</code>をクリックしてブラウザでウェブサイトをプレビュー：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo serve -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img alt="hugo serve -D" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/openLocalhost.jpg" width="1600"></p>
+<h3 id="記事を追加する"><a href="#%e8%a8%98%e4%ba%8b%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" class="header-anchor"></a>記事を追加する
+</h3><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">ヒント</span>
+        </div>
+        <div class="alert-body">
+            <p>記事ディレクトリは記事をより良く分類するためのものです。ディレクトリ名には英語を使用することをお勧めします</p>
+        </div>
+    </blockquote>
+<ul>
+<li>Windowsユーザーはターミナルで以下のスクリプトを実行：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.\newPost.bat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Linux/macOSユーザーは以下のコマンドを実行：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">chmod +x ./newPost.sh
+</span></span><span class="line"><span class="cl">./newPost.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img alt="newPost" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newPost.jpg" width="1600"></p>
+<p>対応するディレクトリの<code>index.ja.md</code>を開き、以下の内容を変更：</p>
+<ul>
+<li><code>title</code>：記事タイトル</li>
+<li><code>description</code>：記事説明</li>
+<li><code>image</code>：記事カバー画像パス（相対パスを使用可能）</li>
+<li><code>comments</code>：コメントセクションの切り替え（オン：<code>true</code>、オフ：<code>false</code>）</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">ヒント</span>
+        </div>
+        <div class="alert-body">
+            <p><code>draft: true</code>を<code>draft: false</code>に変更してください</p>
+        </div>
+    </blockquote>
+<p><img alt="index.ja.md最初の段落" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/indexMd.jpg" width="1600"></p>
+<p>記事の内容については、元の作成者の<a class="link" href="https://demo.stack.cai.im/ja/p/markdown-syntax/"  target="_blank" rel="noopener"
+    >Markdown構文ガイド</a>を参照してください</p>
+<p><img alt="Markdown構文ガイド" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/markdownWeb.jpg" width="1600"></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">ヒント</span>
+        </div>
+        <div class="alert-body">
+            <p><code>hugo serve -D</code>を実行すると、記事の変更をリアルタイムで確認できます</p>
+        </div>
+    </blockquote>
+<h2 id="ウェブサイトをデプロイする"><a href="#%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b" class="header-anchor"></a>ウェブサイトをデプロイする
+</h2><h3 id="静的ページを生成する"><a href="#%e9%9d%99%e7%9a%84%e3%83%9a%e3%83%bc%e3%82%b8%e3%82%92%e7%94%9f%e6%88%90%e3%81%99%e3%82%8b" class="header-anchor"></a>静的ページを生成する
+</h3><p>記事を書き終わったら、プロジェクトルートで以下のコマンドを実行して静的ページを生成：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>多くのファイルが<code>public</code>フォルダに表示されます。</p>
+<p><img alt="publicフォルダ" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/publicDir.jpg" width="1600"></p>
+<p>次に以下のコマンドを実行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git config --global --add safe.directory /absolute/path/to/your/project/public
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/your-github-username/your-github-username.github.io.git
+</span></span><span class="line"><span class="cl">git checkout -b main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git config --global user.email &#34;your-github-email@example.com&#34;
+</span></span><span class="line"><span class="cl">git config --global user.name &#34;your-github-username&#34;
+</span></span><span class="line"><span class="cl">git commit -m &#34;Your commit message&#34;
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="プロジェクトをプッシュする"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e3%81%99%e3%82%8b" class="header-anchor"></a>プロジェクトをプッシュする
+</h3><p>GitHubリポジトリを開き、「Settings」→「Pages」をクリックし、「Branch」を「None」から「main」に変更し、「Save」をクリック</p>
+<p><img alt="GitHub Pages" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPages.jpg" width="1600"></p>
+<p>GitHubのデプロイが完了するのを待ちます。その後、以下のアドレスでブログにアクセスできます<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p><img alt="マイブログ" class="gallery-image" data-flex-basis="428px" data-flex-grow="178" height="897" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/blogHome.jpg" width="1600"></p>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">クイックメモ</span>
+        </div>
+        <div class="alert-body">
+            <p>その後のプッシュは<code>gitPush.bat</code>を実行してください</p>
+        </div>
+    </blockquote>
+<p>インストーラーを実行し、インストールウィザードに従ってインストールしてください。</p>
+<p><img alt="VS Codeインストール" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeInstall.jpg" width="3200"></p>
+<h4 id="vs-codeの設定-1"><a href="#vs-code%e3%81%ae%e8%a8%ad%e5%ae%9a-1" class="header-anchor"></a>VS Codeの設定
+</h4><p>インストール後、デスクトップからVisual Studio Codeを開き、以下のプラグインを検索してインストールしてください：</p>
+<p><img alt="中国語言語パック" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChinese.jpg" width="3200">  <img alt="TOML構文ハイライト" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeToml.jpg" width="3200">  <img alt="HTMLライブプレビュー" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeLiveServer.jpg" width="3200"></p>
+<p>インストール後、VS Codeを再起動すると、ソフトウェア全体が中文で表示されます。</p>
+<p><img alt="中文表示のVS Code" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChineseImg.jpg" width="3200"></p>
+<h3 id="gitのインストール-1"><a href="#git%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab-1" class="header-anchor"></a>Gitのインストール
+</h3>
+    <blockquote>
+        <p>Gitは分散バージョン管理システムで、ソースコードやデータのバージョンを管理できます。ソフトウェア開発者が共同開発でソースコードを管理するために一般的に使用されています<br>
+— <cite><a class="link" href="https://en.wikipedia.org/wiki/Git"  target="_blank" rel="noopener"
+    >Wikipedia</a>より引用</cite></p>
+
+    </blockquote>
+<h4 id="gitのダウンロードとインストール-1"><a href="#git%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%a8%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab-1" class="header-anchor"></a>Gitのダウンロードとインストール
+</h4><p><a class="link" href="https://git-scm.com/install/windows"  target="_blank" rel="noopener"
+    >Gitダウンロードページ</a>を開き、使用しているOSに適したインストーラーをダウンロードしてください。</p>
+<p><img alt="Gitダウンロードページ" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitDownload.jpg" width="3200"></p>
+<p>Gitインストーラーを実行し、「Next」をクリックして以下の画面が表示されたら、図示したオプションにチェックを入れてインストールを完了してください。</p>
+<p><img alt="Gitインストール" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitInstall.jpg" width="3200"></p>
+<h3 id="githubの設定-1"><a href="#github%e3%81%ae%e8%a8%ad%e5%ae%9a-1" class="header-anchor"></a>GitHubの設定
+</h3><h4 id="githubアカウントを登録する-1"><a href="#github%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e3%82%92%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b-1" class="header-anchor"></a>GitHubアカウントを登録する
+</h4><p><a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHubホームページ</a>を開き、「Sign up」をクリックして、情報を入力して登録を完了してください。</p>
+<p><img alt="GitHubホームページ" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="1998" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp.jpg" width="3198">  <img alt="GitHubサインアップ" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp1.jpg" width="3200"></p>
+<h4 id="新規リポジトリを作成する-1"><a href="#%e6%96%b0%e8%a6%8f%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b-1" class="header-anchor"></a>新規リポジトリを作成する
+</h4><p><a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHubホームページ</a>に行き、「New」をクリックして<a class="link" href="https://github.com/new"  target="_blank" rel="noopener"
+    >新しいリポジトリ</a>を作成し、「Repository name」に「あなたのGitHubユーザー名.github.io」を入力し、「Description」にプロジェクトの説明を入力し、「Add a README file」にチェックを入れてください。</p>
+<p><img alt="新規リポジトリ作成" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newRepositories.jpg" width="3200">  <img class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createNewRepository.jpg" width="3200"></p>
+<h4 id="ssh鍵を設定する-1"><a href="#ssh%e9%8d%b5%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%99%e3%82%8b-1" class="header-anchor"></a>SSH鍵を設定する
+</h4><p>スタートメニューで「Git Bash」を検索して開くか、デスクトップの空白处を右クリックし、「Open Git Bash Here」を選択してください。</p>
+<p><img alt="デスクトップでGit Bashを開く" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/desktopGitBash.jpg" width="3200"></p>
+<p>以下のコマンドを実行します（<code>your_email@example.com</code>をあなたのメールアドレスに置き換えてください）。確認を求められたらEnterを押してください：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;
+</span></span><span class="line"><span class="cl">cat ~/.ssh/id*.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2番目のコマンドの出力をコピーし、<a class="link" href="https://github.com/settings/ssh/new"  target="_blank" rel="noopener"
+    >SSH鍵設定ページ</a>を開き、「Title」に名前を入力し（例：「私の作業PC」）、「Key type」はデフォルトのままにし、コピーした公開鍵を「Key」フィールドに貼り付けてください。</p>
+<blockquote class="alert alert-important">
+        <div class="alert-header">
+            <span class="alert-icon">📌</span>
+            <span class="alert-title">重要</span>
+        </div>
+        <div class="alert-body">
+            <p>鍵の最後にスペースがないことを確認してください！</p>
+        </div>
+    </blockquote>
+<p><img alt="SSH鍵作成" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newSSH-key.jpg" width="3200"></p>
+<p>最後にターミナルでSSH接続をテストします。<code>xxx! You've successfully authenticated, but GitHub does not provide shell access.</code>が表示されれば接続成功です。</p>
+<p><img alt="SSH接続テスト" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/sshTest.jpg" width="3200"></p>
+<h2 id="hugoのインストール-1"><a href="#hugo%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab-1" class="header-anchor"></a>Hugoのインストール
+</h2><h3 id="windowsにhugoをインストールする-1"><a href="#windows%e3%81%abhugo%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b-1" class="header-anchor"></a>WindowsにHugoをインストールする
+</h3><h4 id="microsoftのwindowsパッケージマネージャーwingetを使用する-1"><a href="#microsoft%e3%81%aewindows%e3%83%91%e3%83%83%e3%82%b1%e3%83%bc%e3%82%b8%e3%83%9e%e3%83%8d%e3%83%bc%e3%82%b8%e3%83%a3%e3%83%bcwinget%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b-1" class="header-anchor"></a>MicrosoftのWindowsパッケージマネージャーwingetを使用する
+</h4><ul>
+<li><strong>Hugo Extendedをインストール</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget install Hugo.Hugo.Extended
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>Hugo Extendedをアンインストール</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget uninstall --name &#34;Hugo (Extended)&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="githubのコンパイル済みバイナリを使用する-1"><a href="#github%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%ab%e6%b8%88%e3%81%bf%e3%83%90%e3%82%a4%e3%83%8a%e3%83%aa%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b-1" class="header-anchor"></a>GitHubのコンパイル済みバイナリを使用する
+</h4><p><a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >GitHub</a>から<code>hugo_extended_x.xxx.x_windows-amd64.zip</code>をダウンロードし、解凍してから<a class="link" href="https://zhuanlan.zhihu.com/p/646247339"  target="_blank" rel="noopener"
+    >環境変数を設定</a>してください</p>
+<p><img alt="Hugo Extendedダウンロード" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugoExtendedDownload.jpg" width="3200"></p>
+<h3 id="linuxにhugoをインストールする-1"><a href="#linux%e3%81%abhugo%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b-1" class="header-anchor"></a>LinuxにHugoをインストールする
+</h3><h4 id="パッケージマネージャーを使用する-1"><a href="#%e3%83%91%e3%83%83%e3%82%b1%e3%83%bc%e3%82%b8%e3%83%9e%e3%83%8d%e3%83%bc%e3%82%b8%e3%83%a3%e3%83%bc%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b-1" class="header-anchor"></a>パッケージマネージャーを使用する
+</h4><ul>
+<li>
+<p><strong>Ubuntu/Debianシステム</strong></p>
+<ul>
+<li>aptでHugo Extendedをインストール</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Fedoraシステム</strong></p>
+<ul>
+<li>dnfでインストール</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Arch Linuxシステム</strong></p>
+<ul>
+<li>pacmanでインストール</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="コンパイル済みバイナリを使用する-1"><a href="#%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%ab%e6%b8%88%e3%81%bf%e3%83%90%e3%82%a4%e3%83%8a%e3%83%aa%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b-1" class="header-anchor"></a>コンパイル済みバイナリを使用する
+</h4><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">ヒント</span>
+        </div>
+        <div class="alert-body">
+            <p>この方法は最新バージョンのHugo、特にExtendedバージョンを取得できます</p>
+        </div>
+    </blockquote>
+<ol>
+<li>
+<p><a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >Hugoリリースページ</a>を開き、システムに適したファイルをダウンロード：</p>
+<ul>
+<li>64ビットシステム：<code>hugo_extended_x.xxx.x_linux-amd64.tar.gz</code></li>
+<li>32ビットシステム：<code>hugo_extended_x.xxx.x_linux-386.tar.gz</code></li>
+<li>ARMアーキテクチャ： соответствующий <code>hugo_extended_x.xxx.x_linux-arm64.tar.gz</code></li>
+</ul>
+</li>
+<li>
+<p>ターミナルを開き、ダウンロードしたファイルのディレクトリに移動：</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /path/to/downloaded/file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>ファイルを解凍：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -zxvf hugo_extended_x.xxx.x_linux-amd64.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Hugo実行ファイルをシステムパスに移動：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mv hugo /usr/local/bin/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>インストールを確認：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>出力が<code>hugo v0.160.1-d6bc8165e62b29d7d70ede01ed01d0f88de327e6+extended xxx/amd64 BuildDate=2026-04-08T14:02:42Z VendorInfo=gohugoio</code>に類似していれば、インストール成功です。</p>
+<h2 id="プロジェクトを編集する-1"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b-1" class="header-anchor"></a>プロジェクトを編集する
+</h2><h3 id="プロジェクトに入る-1"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%81%ab%e5%85%a5%e3%82%8b-1" class="header-anchor"></a>プロジェクトに入る
+</h3><ul>
+<li>新しい空のフォルダを英名で作成</li>
+<li>VS Codeを開き、「フォルダを開く&hellip;」をクリックし、先ほど作成したフォルダを選択</li>
+</ul>
+<p><img alt="VS Codeフォルダを開く" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeOpenFolder.jpg" width="3200"></p>
+<p><code>Ctrl + J</code>を押してターミナルを開き、<a class="link" href="https://github.com/GuGuIsNotAPigeon/hugo-theme-stack"  target="_blank" rel="noopener"
+    >私のプロジェクト</a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>をクローン</p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">ヒント</span>
+        </div>
+        <div class="alert-body">
+            <p>中国のユーザーは2番目のコマンドを優先的に使用してください</p>
+        </div>
+    </blockquote>
+<p><strong>Windowsユーザー</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Linux/macOSユーザー</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="プロジェクトを変更する-1"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b-1" class="header-anchor"></a>プロジェクトを変更する
 </h3><ul>
 <li>左側のエクスプローラーで<code>config\_default\languages.toml</code>を開き、<code>title</code>の後の内容をあなたのニックネームに変更し、<code>subtitle</code>の後にサブタイトルを入力</li>
 <li><code>config\_default\params.toml</code>を開き、<code>[sidebar]</code>の下の<code>avatar</code>でアバターリンクを変更</li>
@@ -819,7 +1331,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo serve -D
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="記事を追加する"><a href="#%e8%a8%98%e4%ba%8b%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" class="header-anchor"></a>記事を追加する
+</div><h3 id="記事を追加する-1"><a href="#%e8%a8%98%e4%ba%8b%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b-1" class="header-anchor"></a>記事を追加する
 </h3><blockquote class="alert alert-tip">
         <div class="alert-header">
             <span class="alert-icon">💡</span>
@@ -880,8 +1392,8 @@
             <p><code>hugo serve -D</code>を実行すると、記事の変更をリアルタイムで確認できます</p>
         </div>
     </blockquote>
-<h2 id="ウェブサイトをデプロイする"><a href="#%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b" class="header-anchor"></a>ウェブサイトをデプロイする
-</h2><h3 id="静的ページを生成する"><a href="#%e9%9d%99%e7%9a%84%e3%83%9a%e3%83%bc%e3%82%b8%e3%82%92%e7%94%9f%e6%88%90%e3%81%99%e3%82%8b" class="header-anchor"></a>静的ページを生成する
+<h2 id="ウェブサイトをデプロイする-1"><a href="#%e3%82%a6%e3%82%a7%e3%83%96%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b-1" class="header-anchor"></a>ウェブサイトをデプロイする
+</h2><h3 id="静的ページを生成する-1"><a href="#%e9%9d%99%e7%9a%84%e3%83%9a%e3%83%bc%e3%82%b8%e3%82%92%e7%94%9f%e6%88%90%e3%81%99%e3%82%8b-1" class="header-anchor"></a>静的ページを生成する
 </h3><p>記事を書き終わったら、プロジェクトルートで以下のコマンドを実行して静的ページを生成：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -922,18 +1434,18 @@
 </span></span><span class="line"><span class="cl">git push origin main
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="プロジェクトをプッシュする"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e3%81%99%e3%82%8b" class="header-anchor"></a>プロジェクトをプッシュする
+</div><h3 id="プロジェクトをプッシュする-1"><a href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e3%81%99%e3%82%8b-1" class="header-anchor"></a>プロジェクトをプッシュする
 </h3><p>GitHubリポジトリを開き、「Settings」→「Pages」をクリックし、「Branch」を「None」から「main」に変更し、「Save」をクリック</p>
-<p>GitHubのデプロイが完了するのを待ちます。その後、以下のアドレスでブログにアクセスできます<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>：</p>
+<p>GitHubのデプロイが完了するのを待ちます。その後、以下のアドレスでブログにアクセスできます<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>：</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1">
-<p>このプロジェクトはJimmyさんのStackテーマをAIで改変したものです&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>このプロジェクトはJimmyさんのStackテーマをAIで改変したものです&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
 <p>アドレスは <a class="link" href="https://your-github-username.github.io"  target="_blank" rel="noopener"
-    >https://your-github-username.github.io</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    >https://your-github-username.github.io</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -946,6 +1458,10 @@
     <section class="article-tags">
         
             <a href="/ja/tags/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB/">チュートリアル</a>
+        
+            <a href="/ja/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88/">静的サイト</a>
+        
+            <a href="/ja/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9/">オープンソース</a>
         
     </section>
 

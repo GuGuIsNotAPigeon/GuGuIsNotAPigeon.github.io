@@ -25,6 +25,24 @@
                 href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/"
                 />
   </url><url>
+    <loc>https://guguisnotapigeon.github.io/zh-hant-tw/categories/git/</loc>
+    <lastmod>2026-04-30T18:42:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://guguisnotapigeon.github.io/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://guguisnotapigeon.github.io/ja/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/git/"
+                />
+  </url><url>
     <loc>https://guguisnotapigeon.github.io/zh-hant-tw/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>
     <xhtml:link
@@ -107,6 +125,24 @@
                 href="https://guguisnotapigeon.github.io/zh-hant-tw/tags/"
                 />
   </url><url>
+    <loc>https://guguisnotapigeon.github.io/zh-hant-tw/categories/vs-code/</loc>
+    <lastmod>2026-04-30T18:42:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://guguisnotapigeon.github.io/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://guguisnotapigeon.github.io/ja/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/vs-code/"
+                />
+  </url><url>
     <loc>https://guguisnotapigeon.github.io/zh-hant-tw/p/%E4%BD%BF%E7%94%A8-hugo-%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>
     <xhtml:link
@@ -126,6 +162,12 @@
                 />
   </url><url>
     <loc>https://guguisnotapigeon.github.io/zh-hant-tw/tags/%E6%95%99%E5%AD%B8/</loc>
+    <lastmod>2026-04-30T18:42:46+08:00</lastmod>
+  </url><url>
+    <loc>https://guguisnotapigeon.github.io/zh-hant-tw/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/</loc>
+    <lastmod>2026-04-30T18:42:46+08:00</lastmod>
+  </url><url>
+    <loc>https://guguisnotapigeon.github.io/zh-hant-tw/tags/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>
   </url><url>
     <loc>https://guguisnotapigeon.github.io/zh-hant-tw/p/first-blog/</loc>

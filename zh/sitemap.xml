@@ -50,6 +50,21 @@
   </url><url>
     <loc>https://guguisnotapigeon.github.io/categories/git/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://guguisnotapigeon.github.io/ja/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://guguisnotapigeon.github.io/categories/git/"
+                />
   </url><url>
     <loc>https://guguisnotapigeon.github.io/categories/hugo/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>
@@ -112,6 +127,21 @@
   </url><url>
     <loc>https://guguisnotapigeon.github.io/categories/vs-code/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://guguisnotapigeon.github.io/ja/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://guguisnotapigeon.github.io/categories/vs-code/"
+                />
   </url><url>
     <loc>https://guguisnotapigeon.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-04-30T18:42:46+08:00</lastmod>

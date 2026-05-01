@@ -25,6 +25,24 @@
                 href="https://guguisnotapigeon.github.io/ja/categories/"
                 />
   </url><url>
+    <loc>https://guguisnotapigeon.github.io/ja/categories/git/</loc>
+    <lastmod>2026-04-30T18:42:53+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://guguisnotapigeon.github.io/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://guguisnotapigeon.github.io/ja/categories/git/"
+                />
+  </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/</loc>
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
     <xhtml:link
@@ -125,7 +143,31 @@
                 href="https://guguisnotapigeon.github.io/ja/tags/"
                 />
   </url><url>
+    <loc>https://guguisnotapigeon.github.io/ja/categories/vs-code/</loc>
+    <lastmod>2026-04-30T18:42:53+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://guguisnotapigeon.github.io/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://guguisnotapigeon.github.io/ja/categories/vs-code/"
+                />
+  </url><url>
+    <loc>https://guguisnotapigeon.github.io/ja/tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9/</loc>
+    <lastmod>2026-04-30T18:42:53+08:00</lastmod>
+  </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/tags/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB/</loc>
+    <lastmod>2026-04-30T18:42:53+08:00</lastmod>
+  </url><url>
+    <loc>https://guguisnotapigeon.github.io/ja/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88/</loc>
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
   </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/tags/%E3%83%88%E3%83%BC%E3%82%AF/</loc>
