@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://demo.stack.cai.im/en/categories/</loc>
+    <loc>https://guguisnotapigeon.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://demo.stack.cai.im/categories/"
+                href="https://guguisnotapigeon.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hant-tw"
-                href="https://demo.stack.cai.im/zh-hant-tw/categories/"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://demo.stack.cai.im/ja/categories/"
+                href="https://guguisnotapigeon.github.io/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://demo.stack.cai.im/en/categories/"
+                href="https://guguisnotapigeon.github.io/en/categories/"
                 />
   </url><url>
-    <loc>https://demo.stack.cai.im/en/</loc>
+    <loc>https://guguisnotapigeon.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://demo.stack.cai.im/"
+                href="https://guguisnotapigeon.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hant-tw"
-                href="https://demo.stack.cai.im/zh-hant-tw/"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://demo.stack.cai.im/ja/"
+                href="https://guguisnotapigeon.github.io/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://demo.stack.cai.im/en/"
+                href="https://guguisnotapigeon.github.io/en/"
                 />
   </url><url>
-    <loc>https://demo.stack.cai.im/en/tags/</loc>
+    <loc>https://guguisnotapigeon.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://demo.stack.cai.im/tags/"
+                href="https://guguisnotapigeon.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-hant-tw"
-                href="https://demo.stack.cai.im/zh-hant-tw/tags/"
+                href="https://guguisnotapigeon.github.io/zh-hant-tw/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://demo.stack.cai.im/ja/tags/"
+                href="https://guguisnotapigeon.github.io/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://demo.stack.cai.im/en/tags/"
+                href="https://guguisnotapigeon.github.io/en/tags/"
                 />
   </url>
 </urlset>

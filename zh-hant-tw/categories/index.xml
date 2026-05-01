@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on GuGuIsNotPigeon</title>
-        <link>https://demo.stack.cai.im/zh-hant-tw/categories/</link>
+        <link>https://guguisnotapigeon.github.io/zh-hant-tw/categories/</link>
         <description>Recent content in Categories on GuGuIsNotPigeon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-hant-tw</language>
-        <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://demo.stack.cai.im/zh-hant-tw/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://guguisnotapigeon.github.io/zh-hant-tw/categories/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>Hugo</title>
-            <link>https://demo.stack.cai.im/zh-hant-tw/categories/hugo/</link>
+            <link>https://guguisnotapigeon.github.io/zh-hant-tw/categories/hugo/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://demo.stack.cai.im/zh-hant-tw/categories/hugo/</guid>
+            <guid>https://guguisnotapigeon.github.io/zh-hant-tw/categories/hugo/</guid>
             <description></description>
         </item><item>
             <title>其他</title>
-            <link>https://demo.stack.cai.im/zh-hant-tw/categories/%E5%85%B6%E4%BB%96/</link>
+            <link>https://guguisnotapigeon.github.io/zh-hant-tw/categories/%E5%85%B6%E4%BB%96/</link>
             <pubDate>Sat, 25 Apr 2026 13:31:55 +0800</pubDate>
-            <guid>https://demo.stack.cai.im/zh-hant-tw/categories/%E5%85%B6%E4%BB%96/</guid>
+            <guid>https://guguisnotapigeon.github.io/zh-hant-tw/categories/%E5%85%B6%E4%BB%96/</guid>
             <description></description>
         </item></channel>
 </rss>
