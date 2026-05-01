@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Musings on GuGuIsNotPigeon</title>
+        <link>https://guguisnotapigeon.github.io/en/tags/musings/</link>
+        <description>Recent content in Musings on GuGuIsNotPigeon</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 25 Apr 2026 13:31:55 +0800</lastBuildDate><atom:link href="https://guguisnotapigeon.github.io/en/tags/musings/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>First Blog</title>
+            <link>https://guguisnotapigeon.github.io/en/p/first-blog/</link>
+            <pubDate>Sat, 25 Apr 2026 13:31:55 +0800</pubDate>
+            <guid>https://guguisnotapigeon.github.io/en/p/first-blog/</guid>
+            <description>&lt;img src=&#34;https://guguisnotapigeon.github.io/&#34; alt=&#34;Featured image of post First Blog&#34; /&gt;&lt;p&gt;Hello, World~&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>

@@ -29,6 +29,11 @@
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/categories/git/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/categories/git/"
                 />
@@ -70,6 +75,11 @@
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/categories/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/categories/hugo/"
                 />
@@ -88,6 +98,11 @@
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/p/build-your-own-blog-with-hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"
                 />
@@ -104,6 +119,11 @@
   </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/post/</loc>
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/post/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -147,6 +167,11 @@
     <lastmod>2026-04-30T18:42:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/categories/vs-code/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/categories/vs-code/"
                 />
@@ -180,6 +205,11 @@
     <lastmod>2026-04-25T13:31:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/p/first-blog/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/p/first-blog/"
                 />
@@ -196,6 +226,11 @@
   </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/about/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/about/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -216,6 +251,11 @@
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/page/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/page/"
                 />
@@ -232,6 +272,11 @@
   </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/archives/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -251,6 +296,11 @@
     <loc>https://guguisnotapigeon.github.io/ja/links/</loc>
     <xhtml:link
                 rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/links/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://guguisnotapigeon.github.io/links/"
                 />
@@ -266,6 +316,11 @@
                 />
   </url><url>
     <loc>https://guguisnotapigeon.github.io/ja/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://guguisnotapigeon.github.io/en/search/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"

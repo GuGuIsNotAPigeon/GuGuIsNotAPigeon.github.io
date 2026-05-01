@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\nBuilding a Blog\r💡\rTip\rSince Hugo.Extended has more features than standard Hugo, we will use Hugo.Extended throughout this guide.\nPrerequisites\rInstall VS Code\rVS Code is Microsoft&rsquo;s free and open-source text editor, supporting Windows, macOS, and Linux.\nDownload and Install VS Code\rOpen the VS Code download page and choose the appropriate installer for your operating system.\n">
+<title>Build Your Own Blog with Hugo</title>
+
+
+<link rel="canonical" href="https://guguisnotapigeon.github.io/en/p/build-your-own-blog-with-hugo/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    
+
+<link rel="stylesheet" href="/scss/style.min.389e156f5e9bb13df5a924cfa99dfb9c39f3e01e68d9e146cd65bdae963be145.css">
+<script src="/ts/main.min.1fa346218a1a118c9f3635409187df2859ffc0baed5067527ee7cc49e47da431.js"></script><meta property='og:title' content="Build Your Own Blog with Hugo">
+<meta property='og:description' content="\nBuilding a Blog\r💡\rTip\rSince Hugo.Extended has more features than standard Hugo, we will use Hugo.Extended throughout this guide.\nPrerequisites\rInstall VS Code\rVS Code is Microsoft&rsquo;s free and open-source text editor, supporting Windows, macOS, and Linux.\nDownload and Install VS Code\rOpen the VS Code download page and choose the appropriate installer for your operating system.\n">
+<meta property='og:url' content='https://guguisnotapigeon.github.io/en/p/build-your-own-blog-with-hugo/'>
+<meta property='og:site_name' content='GuGuIsNotPigeon'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tutorial' /><meta property='article:tag' content='Static Site' /><meta property='article:tag' content='Open Source' /><meta property='article:published_time' content='2026-04-30T18:42:46&#43;08:00'/><meta property='article:modified_time' content='2026-04-30T18:42:46&#43;08:00'/><meta property='og:image' content='https://guguisnotapigeon.github.io/' />
+<meta name="twitter:title" content="Build Your Own Blog with Hugo">
+<meta name="twitter:description" content="\nBuilding a Blog\r💡\rTip\rSince Hugo.Extended has more features than standard Hugo, we will use Hugo.Extended throughout this guide.\nPrerequisites\rInstall VS Code\rVS Code is Microsoft&rsquo;s free and open-source text editor, supporting Windows, macOS, and Linux.\nDownload and Install VS Code\rOpen the VS Code download page and choose the appropriate installer for your operating system.\n"><meta name="twitter:card" content="">
+    <meta name="twitter:image" content='https://guguisnotapigeon.github.io/' />
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/212193102?v=4" />
+<style>
+     
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+    }
+</style>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/en/">
+                    <img src="https://avatars.githubusercontent.com/u/212193102?v=4" 
+                        width="460"
+                        height="460"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">✨</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/en/">GuGuIsNotPigeon</a></h1>
+            <h2 class="site-description">Don’t worry, you will have no friends in the future. No one in the world will know you.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/en/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    <li id="i18n-switch">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                        <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                            
+                                
+                                
+                                    
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <option value="/en/p/build-your-own-blog-with-hugo/" selected>English</option>
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <option value="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" >简体中文</option>
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                    
+                                
+                                    
+                                
+                                <option value="/zh-hant-tw/p/%E4%BD%BF%E7%94%A8-hugo-%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/" >正體中文</option>
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                    
+                                
+                                <option value="/ja/p/hugo%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/" >日本語</option>
+                            
+                        </select>
+                    </li>
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li><a href="#prerequisites">Prerequisites</a>
+      <ol>
+        <li><a href="#install-vs-code">Install VS Code</a>
+          <ol>
+            <li><a href="#download-and-install-vs-code">Download and Install VS Code</a></li>
+            <li><a href="#configure-vs-code">Configure VS Code</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-git">Install Git</a>
+          <ol>
+            <li><a href="#download-and-install-git">Download and Install Git</a></li>
+          </ol>
+        </li>
+        <li><a href="#configure-github">Configure GitHub</a>
+          <ol>
+            <li><a href="#register-a-github-account">Register a GitHub Account</a></li>
+            <li><a href="#create-a-new-repository">Create a New Repository</a></li>
+            <li><a href="#configure-ssh-key">Configure SSH Key</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#install-hugo">Install Hugo</a>
+      <ol>
+        <li><a href="#install-hugo-on-windows">Install Hugo on Windows</a>
+          <ol>
+            <li><a href="#using-microsofts-windows-package-manager-winget">Using Microsoft&rsquo;s Windows Package Manager winget</a></li>
+            <li><a href="#using-pre-compiled-binaries-from-github">Using Pre-compiled Binaries from GitHub</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-hugo-on-linux">Install Hugo on Linux</a>
+          <ol>
+            <li><a href="#using-package-managers">Using Package Managers</a></li>
+            <li><a href="#using-pre-compiled-binaries">Using Pre-compiled Binaries</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#edit-the-project">Edit the Project</a>
+      <ol>
+        <li><a href="#enter-the-project">Enter the Project</a></li>
+        <li><a href="#modify-the-project">Modify the Project</a></li>
+        <li><a href="#add-articles">Add Articles</a></li>
+      </ol>
+    </li>
+    <li><a href="#deploy-the-website">Deploy the Website</a>
+      <ol>
+        <li><a href="#generate-static-pages">Generate Static Pages</a></li>
+        <li><a href="#push-the-project">Push the Project</a>
+          <ol>
+            <li><a href="#configure-vs-code-1">Configure VS Code</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-git-1">Install Git</a>
+          <ol>
+            <li><a href="#download-and-install-git-1">Download and Install Git</a></li>
+          </ol>
+        </li>
+        <li><a href="#configure-github-1">Configure GitHub</a>
+          <ol>
+            <li><a href="#register-a-github-account-1">Register a GitHub Account</a></li>
+            <li><a href="#create-a-new-repository-1">Create a New Repository</a></li>
+            <li><a href="#configure-ssh-key-1">Configure SSH Key</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#install-hugo-1">Install Hugo</a>
+      <ol>
+        <li><a href="#install-hugo-on-windows-1">Install Hugo on Windows</a>
+          <ol>
+            <li><a href="#using-microsofts-windows-package-manager-winget-1">Using Microsoft&rsquo;s Windows Package Manager winget</a></li>
+            <li><a href="#using-pre-compiled-binaries-from-github-1">Using Pre-compiled Binaries from GitHub</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-hugo-on-linux-1">Install Hugo on Linux</a>
+          <ol>
+            <li><a href="#using-package-managers-1">Using Package Managers</a></li>
+            <li><a href="#using-pre-compiled-binaries-1">Using Pre-compiled Binaries</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#edit-the-project-1">Edit the Project</a>
+      <ol>
+        <li><a href="#enter-the-project-1">Enter the Project</a></li>
+        <li><a href="#modify-the-project-1">Modify the Project</a></li>
+        <li><a href="#add-articles-1">Add Articles</a></li>
+      </ol>
+    </li>
+    <li><a href="#deploy-the-website-1">Deploy the Website</a>
+      <ol>
+        <li><a href="#generate-static-pages-1">Generate Static Pages</a></li>
+        <li><a href="#push-the-project-1">Push the Project</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">
+            <a href="/en/archives/">
+                Archives
+            </a>
+        </h2>
+
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/en/archives/#2026">
+                        
+                            <span class="year">2026</span>
+                            <span class="count">2</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-image">
+        <a href="/en/p/build-your-own-blog-with-hugo/">
+            <img alt="Featured image of post Build Your Own Blog with Hugo" height="1000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugo_01.png" width="3000">
+        </a>
+    </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/en/categories/hugo/" style="background-color: hsl(244, 60%, 84%); color: hsl(244, 60%, 15%);">
+                Hugo
+            </a>
+        
+            
+            
+            
+            <a href="/en/categories/vs-code/" style="background-color: hsl(15, 60%, 84%); color: hsl(15, 60%, 15%);">
+                VS Code
+            </a>
+        
+            
+            
+            
+            <a href="/en/categories/git/" style="background-color: hsl(203, 60%, 84%); color: hsl(203, 60%, 15%);">
+                Git
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/en/p/build-your-own-blog-with-hugo/">Build Your Own Blog with Hugo</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-04-30T18:42:46&#43;08:00'>2026-04-30</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        9 minutes read
+                    </time>
+                
+            </div>
+        
+
+        
+            <div class="inline-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                
+                    <a href="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="link">简体中文</a>
+                
+                    <a href="/zh-hant-tw/p/%E4%BD%BF%E7%94%A8-hugo-%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E9%83%A8%E8%90%BD%E6%A0%BC/" class="link">正體中文</a>
+                
+                    <a href="/ja/p/hugo%E3%81%A7%E8%87%AA%E5%88%86%E3%81%AE%E3%83%96%E3%83%AD%E3%82%B0%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/" class="link">日本語</a>
+                
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>Table of contents</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li><a href="#prerequisites">Prerequisites</a>
+      <ol>
+        <li><a href="#install-vs-code">Install VS Code</a>
+          <ol>
+            <li><a href="#download-and-install-vs-code">Download and Install VS Code</a></li>
+            <li><a href="#configure-vs-code">Configure VS Code</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-git">Install Git</a>
+          <ol>
+            <li><a href="#download-and-install-git">Download and Install Git</a></li>
+          </ol>
+        </li>
+        <li><a href="#configure-github">Configure GitHub</a>
+          <ol>
+            <li><a href="#register-a-github-account">Register a GitHub Account</a></li>
+            <li><a href="#create-a-new-repository">Create a New Repository</a></li>
+            <li><a href="#configure-ssh-key">Configure SSH Key</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#install-hugo">Install Hugo</a>
+      <ol>
+        <li><a href="#install-hugo-on-windows">Install Hugo on Windows</a>
+          <ol>
+            <li><a href="#using-microsofts-windows-package-manager-winget">Using Microsoft&rsquo;s Windows Package Manager winget</a></li>
+            <li><a href="#using-pre-compiled-binaries-from-github">Using Pre-compiled Binaries from GitHub</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-hugo-on-linux">Install Hugo on Linux</a>
+          <ol>
+            <li><a href="#using-package-managers">Using Package Managers</a></li>
+            <li><a href="#using-pre-compiled-binaries">Using Pre-compiled Binaries</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#edit-the-project">Edit the Project</a>
+      <ol>
+        <li><a href="#enter-the-project">Enter the Project</a></li>
+        <li><a href="#modify-the-project">Modify the Project</a></li>
+        <li><a href="#add-articles">Add Articles</a></li>
+      </ol>
+    </li>
+    <li><a href="#deploy-the-website">Deploy the Website</a>
+      <ol>
+        <li><a href="#generate-static-pages">Generate Static Pages</a></li>
+        <li><a href="#push-the-project">Push the Project</a>
+          <ol>
+            <li><a href="#configure-vs-code-1">Configure VS Code</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-git-1">Install Git</a>
+          <ol>
+            <li><a href="#download-and-install-git-1">Download and Install Git</a></li>
+          </ol>
+        </li>
+        <li><a href="#configure-github-1">Configure GitHub</a>
+          <ol>
+            <li><a href="#register-a-github-account-1">Register a GitHub Account</a></li>
+            <li><a href="#create-a-new-repository-1">Create a New Repository</a></li>
+            <li><a href="#configure-ssh-key-1">Configure SSH Key</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#install-hugo-1">Install Hugo</a>
+      <ol>
+        <li><a href="#install-hugo-on-windows-1">Install Hugo on Windows</a>
+          <ol>
+            <li><a href="#using-microsofts-windows-package-manager-winget-1">Using Microsoft&rsquo;s Windows Package Manager winget</a></li>
+            <li><a href="#using-pre-compiled-binaries-from-github-1">Using Pre-compiled Binaries from GitHub</a></li>
+          </ol>
+        </li>
+        <li><a href="#install-hugo-on-linux-1">Install Hugo on Linux</a>
+          <ol>
+            <li><a href="#using-package-managers-1">Using Package Managers</a></li>
+            <li><a href="#using-pre-compiled-binaries-1">Using Pre-compiled Binaries</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#edit-the-project-1">Edit the Project</a>
+      <ol>
+        <li><a href="#enter-the-project-1">Enter the Project</a></li>
+        <li><a href="#modify-the-project-1">Modify the Project</a></li>
+        <li><a href="#add-articles-1">Add Articles</a></li>
+      </ol>
+    </li>
+    <li><a href="#deploy-the-website-1">Deploy the Website</a>
+      <ol>
+        <li><a href="#generate-static-pages-1">Generate Static Pages</a></li>
+        <li><a href="#push-the-project-1">Push the Project</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p><img alt="Blog Home Page" class="gallery-image" data-flex-basis="422px" data-flex-grow="176" height="1818" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/index.jpg" width="3200"></p>
+<!-- ![Article Content](img1.jpg) -->
+<h1 id="building-a-blog"><a href="#building-a-blog" class="header-anchor"></a>Building a Blog
+</h1><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Since Hugo.Extended has more features than standard Hugo, we will use Hugo.Extended throughout this guide.</p>
+        </div>
+    </blockquote>
+<h2 id="prerequisites"><a href="#prerequisites" class="header-anchor"></a>Prerequisites
+</h2><h3 id="install-vs-code"><a href="#install-vs-code" class="header-anchor"></a>Install VS Code
+</h3><p>VS Code is Microsoft&rsquo;s free and open-source text editor, supporting Windows, macOS, and Linux.</p>
+<h4 id="download-and-install-vs-code"><a href="#download-and-install-vs-code" class="header-anchor"></a>Download and Install VS Code
+</h4><p>Open the <a class="link" href="https://code.visualstudio.com/Download"  target="_blank" rel="noopener"
+    >VS Code download page</a> and choose the appropriate installer for your operating system.</p>
+<p><img alt="VS Code Download Page" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeDownload.jpg" width="3200"></p>
+<p>Run the installer and follow the installation prompts.</p>
+<p><img alt="VS Code Installation" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeInstall.jpg" width="3200"></p>
+<h4 id="configure-vs-code"><a href="#configure-vs-code" class="header-anchor"></a>Configure VS Code
+</h4><p>After installation, open Visual Studio Code from the desktop and search for and install the following plugins:</p>
+<p><img alt="Chinese Language Pack" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChinese.jpg" width="3200">  <img alt="TOML Syntax Highlighting" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeToml.jpg" width="3200">  <img alt="HTML Live Preview" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeLiveServer.jpg" width="3200"></p>
+<p>Restart VS Code after installation, and the entire software interface will be in Chinese.</p>
+<p><img alt="VS Code after Chinese" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChineseImg.jpg" width="3200"></p>
+<p>Finally, click &ldquo;File&rdquo; and enable &ldquo;Auto Save&rdquo;.</p>
+<p><img alt="Auto Save" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/autoSave.jpg" width="1600"></p>
+<h3 id="install-git"><a href="#install-git" class="header-anchor"></a>Install Git
+</h3>
+    <blockquote>
+        <p>Git is a distributed version control system that can manage source code or data versions. It is commonly used by software developers for source code control in collaborative development<br>
+— <cite>Excerpt from <a class="link" href="https://en.wikipedia.org/wiki/Git"  target="_blank" rel="noopener"
+    >Wikipedia</a></cite></p>
+
+    </blockquote>
+<h4 id="download-and-install-git"><a href="#download-and-install-git" class="header-anchor"></a>Download and Install Git
+</h4><p>Open the <a class="link" href="https://git-scm.com/install/windows"  target="_blank" rel="noopener"
+    >Git download page</a> and download the appropriate installer for your operating system.</p>
+<p><img alt="Git Download Page" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitDownload.jpg" width="3200"></p>
+<p>Run the Git installer, click &ldquo;Next&rdquo; to reach the following screen, check the options as shown and complete the installation.</p>
+<p><img alt="Git Installation" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitInstall.jpg" width="3200"></p>
+<h3 id="configure-github"><a href="#configure-github" class="header-anchor"></a>Configure GitHub
+</h3><h4 id="register-a-github-account"><a href="#register-a-github-account" class="header-anchor"></a>Register a GitHub Account
+</h4><p>Open <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHub&rsquo;s homepage</a>, click &ldquo;Sign up&rdquo;, fill in your information to complete registration.</p>
+<p><img alt="GitHub Homepage" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="1998" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp.jpg" width="3198">  <img alt="GitHub Sign Up" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp1.jpg" width="3200"></p>
+<h4 id="create-a-new-repository"><a href="#create-a-new-repository" class="header-anchor"></a>Create a New Repository
+</h4><p>Go to <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHub&rsquo;s homepage</a>, click &ldquo;New&rdquo; to <a class="link" href="https://github.com/new"  target="_blank" rel="noopener"
+    >create a new repository</a>, fill in &ldquo;Repository name&rdquo; with &ldquo;your-github-username.github.io&rdquo;, fill in &ldquo;Description&rdquo; with a description for your project, and check &ldquo;Add a README file&rdquo;.</p>
+<p><img alt="Create New Repository" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newRepositories.jpg" width="3200">  <img class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createNewRepository.jpg" width="3200"></p>
+<h4 id="configure-ssh-key"><a href="#configure-ssh-key" class="header-anchor"></a>Configure SSH Key
+</h4><p>Search for &ldquo;Git Bash&rdquo; in the Start menu and open it, or right-click on the desktop and select &ldquo;Open Git Bash Here&rdquo;.</p>
+<p><img alt="Open Git Bash on Desktop" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/desktopGitBash.jpg" width="3200"></p>
+<p>Run the following commands (replace <code>your_email@example.com</code> with your email address), press Enter when prompted:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;
+</span></span><span class="line"><span class="cl">cat ~/.ssh/id*.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Copy the output from the second command, open the <a class="link" href="https://github.com/settings/ssh/new"  target="_blank" rel="noopener"
+    >SSH key settings page</a>, fill in a name in &ldquo;Title&rdquo; (e.g., &ldquo;My Work Computer&rdquo;), keep &ldquo;Key type&rdquo; as default, and paste the copied public key into the &ldquo;Key&rdquo; field.</p>
+<blockquote class="alert alert-important">
+        <div class="alert-header">
+            <span class="alert-icon">📌</span>
+            <span class="alert-title">Important</span>
+        </div>
+        <div class="alert-body">
+            <p>Make sure there are no trailing spaces in the key!</p>
+        </div>
+    </blockquote>
+<p><img alt="Create SSH Key" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newSSH-key.jpg" width="3200"></p>
+<p>Finally, test SSH connectivity in the terminal. If you see <code>xxx! You've successfully authenticated, but GitHub does not provide shell access.</code>, the connection is successful.</p>
+<p><img alt="Test SSH Connection" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/sshTest.jpg" width="3200"></p>
+<h2 id="install-hugo"><a href="#install-hugo" class="header-anchor"></a>Install Hugo
+</h2><h3 id="install-hugo-on-windows"><a href="#install-hugo-on-windows" class="header-anchor"></a>Install Hugo on Windows
+</h3><h4 id="using-microsofts-windows-package-manager-winget"><a href="#using-microsofts-windows-package-manager-winget" class="header-anchor"></a>Using Microsoft&rsquo;s Windows Package Manager winget
+</h4><ul>
+<li><strong>Install Hugo Extended</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget install Hugo.Hugo.Extended
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>Uninstall Hugo Extended</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget uninstall --name &#34;Hugo (Extended)&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="using-pre-compiled-binaries-from-github"><a href="#using-pre-compiled-binaries-from-github" class="header-anchor"></a>Using Pre-compiled Binaries from GitHub
+</h4><p>Download <code>hugo_extended_x.xxx.x_windows-amd64.zip</code> from <a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >GitHub</a>, extract it, and <a class="link" href="https://zhuanlan.zhihu.com/p/646247339"  target="_blank" rel="noopener"
+    >configure environment variables</a></p>
+<p><img alt="Hugo Extended Download" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugoExtendedDownload.jpg" width="3200"></p>
+<h3 id="install-hugo-on-linux"><a href="#install-hugo-on-linux" class="header-anchor"></a>Install Hugo on Linux
+</h3><h4 id="using-package-managers"><a href="#using-package-managers" class="header-anchor"></a>Using Package Managers
+</h4><ul>
+<li>
+<p><strong>Ubuntu/Debian Systems</strong></p>
+<ul>
+<li>Install Hugo Extended using apt</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Fedora Systems</strong></p>
+<ul>
+<li>Install using dnf</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Arch Linux Systems</strong></p>
+<ul>
+<li>Install using pacman</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="using-pre-compiled-binaries"><a href="#using-pre-compiled-binaries" class="header-anchor"></a>Using Pre-compiled Binaries
+</h4><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>This method can get the latest version of Hugo, especially the Extended version</p>
+        </div>
+    </blockquote>
+<ol>
+<li>
+<p>Open the <a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >Hugo Releases page</a> and download the file suitable for your system:</p>
+<ul>
+<li>64-bit systems: download <code>hugo_extended_x.xxx.x_linux-amd64.tar.gz</code></li>
+<li>32-bit systems: download <code>hugo_extended_x.xxx.x_linux-386.tar.gz</code></li>
+<li>ARM architecture: download the corresponding <code>hugo_extended_x.xxx.x_linux-arm64.tar.gz</code></li>
+</ul>
+</li>
+<li>
+<p>Open the terminal and navigate to the downloaded file&rsquo;s directory:</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /path/to/downloaded/file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Extract the file:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -zxvf hugo_extended_x.xxx.x_linux-amd64.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Move the Hugo executable to the system path:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mv hugo /usr/local/bin/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>Verify the installation:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If the output is similar to <code>hugo v0.160.1-d6bc8165e62b29d7d70ede01ed01d0f88de327e6+extended xxx/amd64 BuildDate=2026-04-08T14:02:42Z VendorInfo=gohugoio</code>, the installation is successful.</p>
+<h2 id="edit-the-project"><a href="#edit-the-project" class="header-anchor"></a>Edit the Project
+</h2><h3 id="enter-the-project"><a href="#enter-the-project" class="header-anchor"></a>Enter the Project
+</h3><ul>
+<li>Create a new empty folder with an English name</li>
+<li>Open VS Code, click &ldquo;Open Folder&hellip;&rdquo;, and select the folder you just created</li>
+</ul>
+<p><img alt="VS Code Open Folder" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeOpenFolder.jpg" width="3200"></p>
+<p>Press <code>Ctrl + J</code> to open the terminal, and clone <a class="link" href="https://github.com/GuGuIsNotAPigeon/hugo-theme-stack"  target="_blank" rel="noopener"
+    >my project</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Chinese users should prioritize using the second command</p>
+        </div>
+    </blockquote>
+<p><strong>Windows Users</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Linux/macOS Users</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img alt="Clone Project" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitClone.jpg" width="1600"></p>
+<h3 id="modify-the-project"><a href="#modify-the-project" class="header-anchor"></a>Modify the Project
+</h3><ul>
+<li>In the Explorer on the left, open <code>config\_default\languages.toml</code>, change the content after <code>title</code> to your nickname, and fill in the subtitle after <code>subtitle</code></li>
+<li>Open <code>config\_default\params.toml</code>, modify your avatar link under <code>[sidebar]</code> -&gt; <code>avatar</code></li>
+<li>Open <code>config\_default\hugo.toml</code>, change <code>baseURL = &quot;https://guguisnotapigeon.github.io/&quot;</code> to <code>https://your-github-username.github.io</code></li>
+</ul>
+<p><img alt="languages.toml" class="gallery-image" data-flex-basis="425px" data-flex-grow="177" height="899" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/languagesToml.jpg" width="1595">  <img alt="params.toml" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/paramsToml.jpg" width="1600">  <img alt="hugo.toml" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugoToml.jpg" width="1600"></p>
+<ul>
+<li>For modifying other files, see the original author&rsquo;s <a class="link" href="https://stack.cai.im/en/guide/"  target="_blank" rel="noopener"
+    >tutorial</a>, and make adjustments based on your actual situation</li>
+</ul>
+<p><img alt="Stack Official Tutorial" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/stackWeb.jpg" width="1600"></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Whether text or links, they must be modified within English double quotes</p>
+        </div>
+    </blockquote>
+<ul>
+<li>Run the following command in the terminal, hold <code>Ctrl</code> and click <code>http://localhost:xxxx</code> to preview the website in the browser:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo serve -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img alt="hugo serve -D" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/openLocalhost.jpg" width="1600"></p>
+<h3 id="add-articles"><a href="#add-articles" class="header-anchor"></a>Add Articles
+</h3><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Article directories are for better categorizing articles. It is recommended to use English as the directory name.</p>
+        </div>
+    </blockquote>
+<ul>
+<li>Windows users run the following script in the terminal:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.\newPost.bat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Linux/macOS users run the following command:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">chmod +x ./newPost.sh
+</span></span><span class="line"><span class="cl">./newPost.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img alt="newPost" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newPost.jpg" width="1600"></p>
+<p>Open <code>index.md</code> in the corresponding directory and modify the following:</p>
+<ul>
+<li><code>title</code>: Article title</li>
+<li><code>description</code>: Article description</li>
+<li><code>image</code>: Article cover image path (can use relative path)</li>
+<li><code>comments</code>: Toggle comment section (on: <code>true</code>, off: <code>false</code>)</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Please change <code>draft: true</code> to <code>draft: false</code></p>
+        </div>
+    </blockquote>
+<p><img alt="index.md First Paragraph" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/indexMd.jpg" width="1600"></p>
+<p>For article content writing, see the original author&rsquo;s <a class="link" href="https://demo.stack.cai.im/en/p/markdown-syntax/"  target="_blank" rel="noopener"
+    >Markdown syntax guide</a></p>
+<p><img alt="Markdown Syntax Guide" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/markdownWeb.jpg" width="1600"></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Running <code>hugo serve -D</code> allows you to view article modifications in real-time</p>
+        </div>
+    </blockquote>
+<h2 id="deploy-the-website"><a href="#deploy-the-website" class="header-anchor"></a>Deploy the Website
+</h2><h3 id="generate-static-pages"><a href="#generate-static-pages" class="header-anchor"></a>Generate Static Pages
+</h3><p>After writing the article, run the following command in the project root to generate static pages:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Many files will appear in the <code>public</code> folder.</p>
+<p><img alt="public folder" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="898" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/publicDir.jpg" width="1600"></p>
+<p>Then run the following commands:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git config --global --add safe.directory /absolute/path/to/your/project/public
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/your-github-username/your-github-username.github.io.git
+</span></span><span class="line"><span class="cl">git checkout -b main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git config --global user.email &#34;your-github-email@example.com&#34;
+</span></span><span class="line"><span class="cl">git config --global user.name &#34;your-github-username&#34;
+</span></span><span class="line"><span class="cl">git commit -m &#34;Your commit message&#34;
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="push-the-project"><a href="#push-the-project" class="header-anchor"></a>Push the Project
+</h3><p>Open your GitHub repository, click &ldquo;Settings&rdquo; → &ldquo;Pages&rdquo;, change &ldquo;Branch&rdquo; from &ldquo;None&rdquo; to &ldquo;main&rdquo;, and click &ldquo;Save&rdquo;</p>
+<p><img alt="GitHub Pages" class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubPages.jpg" width="1600"></p>
+<p>Wait for GitHub to finish deploying. After that, you can access your blog at the following address<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p><img alt="My Blog" class="gallery-image" data-flex-basis="428px" data-flex-grow="178" height="897" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/blogHome.jpg" width="1600"></p>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">Quick Note</span>
+        </div>
+        <div class="alert-body">
+            <p>For subsequent pushes, you can run <code>gitPush.bat</code></p>
+        </div>
+    </blockquote>
+<p>Run the installer and follow the installation prompts.</p>
+<p><img alt="VS Code Installation" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeInstall.jpg" width="3200"></p>
+<h4 id="configure-vs-code-1"><a href="#configure-vs-code-1" class="header-anchor"></a>Configure VS Code
+</h4><p>After installation, open Visual Studio Code from the desktop and search for and install the following plugins:</p>
+<p><img alt="Chinese Language Pack" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChinese.jpg" width="3200">  <img alt="TOML Syntax Highlighting" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeToml.jpg" width="3200">  <img alt="HTML Live Preview" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeLiveServer.jpg" width="3200"></p>
+<p>Restart VS Code after installation, and the entire software interface will be in Chinese.</p>
+<p><img alt="VS Code after Chinese" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeChineseImg.jpg" width="3200"></p>
+<h3 id="install-git-1"><a href="#install-git-1" class="header-anchor"></a>Install Git
+</h3>
+    <blockquote>
+        <p>Git is a distributed version control system that can manage source code or data versions. It is commonly used by software developers for source code control in collaborative development<br>
+— <cite>Excerpt from <a class="link" href="https://en.wikipedia.org/wiki/Git"  target="_blank" rel="noopener"
+    >Wikipedia</a></cite></p>
+
+    </blockquote>
+<h4 id="download-and-install-git-1"><a href="#download-and-install-git-1" class="header-anchor"></a>Download and Install Git
+</h4><p>Open the <a class="link" href="https://git-scm.com/install/windows"  target="_blank" rel="noopener"
+    >Git download page</a> and download the appropriate installer for your operating system.</p>
+<p><img alt="Git Download Page" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitDownload.jpg" width="3200"></p>
+<p>Run the Git installer, click &ldquo;Next&rdquo; to reach the following screen, check the options as shown and complete the installation.</p>
+<p><img alt="Git Installation" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/gitInstall.jpg" width="3200"></p>
+<h3 id="configure-github-1"><a href="#configure-github-1" class="header-anchor"></a>Configure GitHub
+</h3><h4 id="register-a-github-account-1"><a href="#register-a-github-account-1" class="header-anchor"></a>Register a GitHub Account
+</h4><p>Open <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHub&rsquo;s homepage</a>, click &ldquo;Sign up&rdquo;, fill in your information to complete registration.</p>
+<p><img alt="GitHub Homepage" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="1998" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp.jpg" width="3198">  <img alt="GitHub Sign Up" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/githubSignUp1.jpg" width="3200"></p>
+<h4 id="create-a-new-repository-1"><a href="#create-a-new-repository-1" class="header-anchor"></a>Create a New Repository
+</h4><p>Go to <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >GitHub&rsquo;s homepage</a>, click &ldquo;New&rdquo; to <a class="link" href="https://github.com/new"  target="_blank" rel="noopener"
+    >create a new repository</a>, fill in &ldquo;Repository name&rdquo; with &ldquo;your-github-username.github.io&rdquo;, fill in &ldquo;Description&rdquo; with a description for your project, and check &ldquo;Add a README file&rdquo;.</p>
+<p><img alt="Create New Repository" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newRepositories.jpg" width="3200">  <img class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/createNewRepository.jpg" width="3200"></p>
+<h4 id="configure-ssh-key-1"><a href="#configure-ssh-key-1" class="header-anchor"></a>Configure SSH Key
+</h4><p>Search for &ldquo;Git Bash&rdquo; in the Start menu and open it, or right-click on the desktop and select &ldquo;Open Git Bash Here&rdquo;.</p>
+<p><img alt="Open Git Bash on Desktop" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/desktopGitBash.jpg" width="3200"></p>
+<p>Run the following commands (replace <code>your_email@example.com</code> with your email address), press Enter when prompted:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;
+</span></span><span class="line"><span class="cl">cat ~/.ssh/id*.pub
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Copy the output from the second command, open the <a class="link" href="https://github.com/settings/ssh/new"  target="_blank" rel="noopener"
+    >SSH key settings page</a>, fill in a name in &ldquo;Title&rdquo; (e.g., &ldquo;My Work Computer&rdquo;), keep &ldquo;Key type&rdquo; as default, and paste the copied public key into the &ldquo;Key&rdquo; field.</p>
+<blockquote class="alert alert-important">
+        <div class="alert-header">
+            <span class="alert-icon">📌</span>
+            <span class="alert-title">Important</span>
+        </div>
+        <div class="alert-body">
+            <p>Make sure there are no trailing spaces in the key!</p>
+        </div>
+    </blockquote>
+<p><img alt="Create SSH Key" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/newSSH-key.jpg" width="3200"></p>
+<p>Finally, test SSH connectivity in the terminal. If you see <code>xxx! You've successfully authenticated, but GitHub does not provide shell access.</code>, the connection is successful.</p>
+<p><img alt="Test SSH Connection" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/sshTest.jpg" width="3200"></p>
+<h2 id="install-hugo-1"><a href="#install-hugo-1" class="header-anchor"></a>Install Hugo
+</h2><h3 id="install-hugo-on-windows-1"><a href="#install-hugo-on-windows-1" class="header-anchor"></a>Install Hugo on Windows
+</h3><h4 id="using-microsofts-windows-package-manager-winget-1"><a href="#using-microsofts-windows-package-manager-winget-1" class="header-anchor"></a>Using Microsoft&rsquo;s Windows Package Manager winget
+</h4><ul>
+<li><strong>Install Hugo Extended</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget install Hugo.Hugo.Extended
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>Uninstall Hugo Extended</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">winget uninstall --name &#34;Hugo (Extended)&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="using-pre-compiled-binaries-from-github-1"><a href="#using-pre-compiled-binaries-from-github-1" class="header-anchor"></a>Using Pre-compiled Binaries from GitHub
+</h4><p>Download <code>hugo_extended_x.xxx.x_windows-amd64.zip</code> from <a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >GitHub</a>, extract it, and <a class="link" href="https://zhuanlan.zhihu.com/p/646247339"  target="_blank" rel="noopener"
+    >configure environment variables</a></p>
+<p><img alt="Hugo Extended Download" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/hugoExtendedDownload.jpg" width="3200"></p>
+<h3 id="install-hugo-on-linux-1"><a href="#install-hugo-on-linux-1" class="header-anchor"></a>Install Hugo on Linux
+</h3><h4 id="using-package-managers-1"><a href="#using-package-managers-1" class="header-anchor"></a>Using Package Managers
+</h4><ul>
+<li>
+<p><strong>Ubuntu/Debian Systems</strong></p>
+<ul>
+<li>Install Hugo Extended using apt</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Fedora Systems</strong></p>
+<ul>
+<li>Install using dnf</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Arch Linux Systems</strong></p>
+<ul>
+<li>Install using pacman</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="using-pre-compiled-binaries-1"><a href="#using-pre-compiled-binaries-1" class="header-anchor"></a>Using Pre-compiled Binaries
+</h4><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>This method can get the latest version of Hugo, especially the Extended version</p>
+        </div>
+    </blockquote>
+<ol>
+<li>
+<p>Open the <a class="link" href="https://github.com/gohugoio/hugo/releases/latest"  target="_blank" rel="noopener"
+    >Hugo Releases page</a> and download the file suitable for your system:</p>
+<ul>
+<li>64-bit systems: download <code>hugo_extended_x.xxx.x_linux-amd64.tar.gz</code></li>
+<li>32-bit systems: download <code>hugo_extended_x.xxx.x_linux-386.tar.gz</code></li>
+<li>ARM architecture: download the corresponding <code>hugo_extended_x.xxx.x_linux-arm64.tar.gz</code></li>
+</ul>
+</li>
+<li>
+<p>Open the terminal and navigate to the downloaded file&rsquo;s directory:</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /path/to/downloaded/file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Extract the file:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -zxvf hugo_extended_x.xxx.x_linux-amd64.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Move the Hugo executable to the system path:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mv hugo /usr/local/bin/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>Verify the installation:</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If the output is similar to <code>hugo v0.160.1-d6bc8165e62b29d7d70ede01ed01d0f88de327e6+extended xxx/amd64 BuildDate=2026-04-08T14:02:42Z VendorInfo=gohugoio</code>, the installation is successful.</p>
+<h2 id="edit-the-project-1"><a href="#edit-the-project-1" class="header-anchor"></a>Edit the Project
+</h2><h3 id="enter-the-project-1"><a href="#enter-the-project-1" class="header-anchor"></a>Enter the Project
+</h3><ul>
+<li>Create a new empty folder with an English name</li>
+<li>Open VS Code, click &ldquo;Open Folder&hellip;&rdquo;, and select the folder you just created</li>
+</ul>
+<p><img alt="VS Code Open Folder" class="gallery-image" data-flex-basis="384px" data-flex-grow="160" height="2000" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/vscodeOpenFolder.jpg" width="3200"></p>
+<p>Press <code>Ctrl + J</code> to open the terminal, and clone <a class="link" href="https://github.com/GuGuIsNotAPigeon/hugo-theme-stack"  target="_blank" rel="noopener"
+    >my project</a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Chinese users should prioritize using the second command</p>
+        </div>
+    </blockquote>
+<p><strong>Windows Users</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git .\
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Linux/macOS Users</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span><span class="line"><span class="cl">git clone https://gh-proxy.org/https://github.com/GuGuIsNotAPigeon/hugo-theme-stack.git ./
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="modify-the-project-1"><a href="#modify-the-project-1" class="header-anchor"></a>Modify the Project
+</h3><ul>
+<li>In the Explorer on the left, open <code>config\_default\languages.toml</code>, change the content after <code>title</code> to your nickname, and fill in the subtitle after <code>subtitle</code></li>
+<li>Open <code>config\_default\params.toml</code>, modify your avatar link under <code>[sidebar]</code> -&gt; <code>avatar</code></li>
+<li>For modifying other files, see the original author&rsquo;s <a class="link" href="https://stack.cai.im/en/guide/"  target="_blank" rel="noopener"
+    >tutorial</a>, and make adjustments based on your actual situation</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Whether text or links, they must be modified within English double quotes</p>
+        </div>
+    </blockquote>
+<ul>
+<li>Run the following command in the terminal, hold <code>Ctrl</code> and click <code>http://localhost:xxxx</code> to preview the website in the browser:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo serve -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="add-articles-1"><a href="#add-articles-1" class="header-anchor"></a>Add Articles
+</h3><blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Article directories are for better categorizing articles. It is recommended to use English as the directory name.</p>
+        </div>
+    </blockquote>
+<ul>
+<li>Windows users run the following script in the terminal:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.\newPost.bat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Linux/macOS users run the following command:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">chmod +x ./newPost.sh
+</span></span><span class="line"><span class="cl">./newPost.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Open <code>index.md</code> in the corresponding directory and modify the following:</p>
+<ul>
+<li><code>title</code>: Article title</li>
+<li><code>description</code>: Article description</li>
+<li><code>image</code>: Article cover image path (can use relative path)</li>
+<li><code>comments</code>: Toggle comment section (on: <code>true</code>, off: <code>false</code>)</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Please change <code>draft: true</code> to <code>draft: false</code></p>
+        </div>
+    </blockquote>
+<p>For article content writing, see the original author&rsquo;s <a class="link" href="https://demo.stack.cai.im/en/p/markdown-syntax/"  target="_blank" rel="noopener"
+    >Markdown syntax guide</a></p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">Tip</span>
+        </div>
+        <div class="alert-body">
+            <p>Running <code>hugo serve -D</code> allows you to view article modifications in real-time</p>
+        </div>
+    </blockquote>
+<h2 id="deploy-the-website-1"><a href="#deploy-the-website-1" class="header-anchor"></a>Deploy the Website
+</h2><h3 id="generate-static-pages-1"><a href="#generate-static-pages-1" class="header-anchor"></a>Generate Static Pages
+</h3><p>After writing the article, run the following command in the project root to generate static pages:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Many files will appear in the <code>public</code> folder. Then run the following commands:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git config --global --add safe.directory /absolute/path/to/your/project/public
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/your-github-username/your-github-username.github.io.git
+</span></span><span class="line"><span class="cl">git checkout -b main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git config --global user.email &#34;your-github-email@example.com&#34;
+</span></span><span class="line"><span class="cl">git config --global user.name &#34;your-github-username&#34;
+</span></span><span class="line"><span class="cl">git commit -m &#34;Your commit message&#34;
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="push-the-project-1"><a href="#push-the-project-1" class="header-anchor"></a>Push the Project
+</h3><p>Open your GitHub repository, click &ldquo;Settings&rdquo; → &ldquo;Pages&rdquo;, change &ldquo;Branch&rdquo; from &ldquo;None&rdquo; to &ldquo;main&rdquo;, and click &ldquo;Save&rdquo;</p>
+<p>Wait for GitHub to finish deploying. After that, you can access your blog at the following address<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This project is based on Jimmy&rsquo;s Stack theme, modified by AI.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Address is <a class="link" href="https://your-github-username.github.io"  target="_blank" rel="noopener"
+    >https://your-github-username.github.io</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/en/tags/tutorial/">Tutorial</a>
+        
+            <a href="/en/tags/static-site/">Static Site</a>
+        
+            <a href="/en/tags/open-source/">Open Source</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const elementsToRender = [".main-article", ".widget--toc"];
+
+        elementsToRender.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                renderMathInElement(element, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+                    ],
+                    ignoredClasses: ["gist"]
+                });
+            }
+        });
+    });
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+        <div id="comments-consent-placeholder" class="consent-placeholder">
+            <p>Comments are disabled until you accept functional cookies.</p>
+            <button class="cookie-btn cookie-btn--primary" data-cookie-action="reopen">
+                Manage preferences
+            </button>
+        </div>
+        <div id="comments-container" style="display: none;">
+            <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+        </div>
+        <script>
+        (function() {
+            var placeholder = document.getElementById('comments-consent-placeholder');
+            var container = document.getElementById('comments-container');
+
+            function showComments() {
+                if (placeholder) placeholder.style.display = 'none';
+                if (container) container.style.display = 'block';
+            }
+
+            function hideComments() {
+                if (placeholder) placeholder.style.display = 'block';
+                if (container) container.style.display = 'none';
+            }
+
+            window.addEventListener('onCookieConsentChange', function(e) {
+                if (e.detail && e.detail.functional) {
+                    showComments();
+                } else {
+                    hideComments();
+                }
+            });
+
+            
+            if (window.cookieConsent && window.cookieConsent.hasConsent('functional')) {
+                showComments();
+            }
+        })();
+        </script>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 GuGuIsNotPigeon
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+    <div id="cookie-consent-banner" class="cookie-banner" aria-hidden="true" role="dialog" aria-labelledby="cookie-banner-title">
+    <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+            <strong id="cookie-banner-title">Cookie Consent</strong>
+            <p>We use cookies to enhance your browsing experience and analyze site traffic.</p>
+        </div>
+
+        <div class="cookie-banner__actions">
+            <button class="cookie-btn cookie-btn--secondary" data-cookie-action="deny">
+                Deny
+            </button>
+            <button class="cookie-btn cookie-btn--primary" data-cookie-action="accept">
+                Accept All
+            </button>
+        </div>
+
+        
+        <div id="cookie-settings-panel" class="cookie-settings" aria-hidden="true">
+            <h3>Cookie Preferences</h3>
+
+            <div class="cookie-category">
+                <label>
+                    <input type="checkbox" name="necessary" checked disabled />
+                    <strong>Necessary</strong>
+                </label>
+                <p>These cookies are required for the website to function and cannot be disabled.</p>
+            </div><div class="cookie-category">
+                <label>
+                    <input type="checkbox" name="analytics" data-cookie-category="analytics" />
+                    <strong>Analytics</strong>
+                </label>
+                <p>These cookies help us understand how visitors interact with our website.</p>
+            </div><div class="cookie-category">
+                <label>
+                    <input type="checkbox" name="functional" data-cookie-category="functional" />
+                    <strong>Functional</strong>
+                </label>
+                <p>These cookies enable features like comments and embedded content.</p>
+            </div><div class="cookie-settings__actions">
+                <button class="cookie-btn cookie-btn--secondary" data-cookie-action="cancel">
+                    Cancel
+                </button>
+                <button class="cookie-btn cookie-btn--primary" data-cookie-action="save">
+                    Save preferences
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="/ts/cookies.6d3577f211db9f4f1997385d4b417cf90130b050bc9e787bb1bb5346d337e998.js" defer></script>
+<script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
+
+
+    </body>
+</html>
