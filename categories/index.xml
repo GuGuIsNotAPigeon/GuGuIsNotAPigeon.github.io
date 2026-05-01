@@ -6,10 +6,22 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
         <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://guguisnotapigeon.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Git</title>
+            <link>https://guguisnotapigeon.github.io/categories/git/</link>
+            <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
+            <guid>https://guguisnotapigeon.github.io/categories/git/</guid>
+            <description></description>
+        </item><item>
             <title>Hugo</title>
             <link>https://guguisnotapigeon.github.io/categories/hugo/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
             <guid>https://guguisnotapigeon.github.io/categories/hugo/</guid>
+            <description></description>
+        </item><item>
+            <title>VS Code</title>
+            <link>https://guguisnotapigeon.github.io/categories/vs-code/</link>
+            <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
+            <guid>https://guguisnotapigeon.github.io/categories/vs-code/</guid>
             <description></description>
         </item><item>
             <title>其他</title>
