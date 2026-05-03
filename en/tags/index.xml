@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on GuGuIsNotPigeon</title>
-        <link>https://guguisnotapigeon.github.io/en/tags/</link>
+        <link>https://www.guguisnotpigeon.dpdns.org/en/tags/</link>
         <description>Recent content in Tags on GuGuIsNotPigeon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://guguisnotapigeon.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://www.guguisnotpigeon.dpdns.org/en/tags/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>Open Source</title>
-            <link>https://guguisnotapigeon.github.io/en/tags/open-source/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/tags/open-source/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/tags/open-source/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/tags/open-source/</guid>
             <description></description>
         </item><item>
             <title>Static Site</title>
-            <link>https://guguisnotapigeon.github.io/en/tags/static-site/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/tags/static-site/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/tags/static-site/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/tags/static-site/</guid>
             <description></description>
         </item><item>
             <title>Tutorial</title>
-            <link>https://guguisnotapigeon.github.io/en/tags/tutorial/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/tags/tutorial/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/tags/tutorial/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/tags/tutorial/</guid>
             <description></description>
         </item><item>
             <title>Musings</title>
-            <link>https://guguisnotapigeon.github.io/en/tags/musings/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/tags/musings/</link>
             <pubDate>Sat, 25 Apr 2026 13:31:55 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/tags/musings/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/tags/musings/</guid>
             <description></description>
         </item></channel>
 </rss>

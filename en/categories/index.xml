@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on GuGuIsNotPigeon</title>
-        <link>https://guguisnotapigeon.github.io/en/categories/</link>
+        <link>https://www.guguisnotpigeon.dpdns.org/en/categories/</link>
         <description>Recent content in Categories on GuGuIsNotPigeon</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://guguisnotapigeon.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Apr 2026 18:42:46 +0800</lastBuildDate><atom:link href="https://www.guguisnotpigeon.dpdns.org/en/categories/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>Git</title>
-            <link>https://guguisnotapigeon.github.io/en/categories/git/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/categories/git/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/categories/git/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/categories/git/</guid>
             <description></description>
         </item><item>
             <title>Hugo</title>
-            <link>https://guguisnotapigeon.github.io/en/categories/hugo/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/categories/hugo/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/categories/hugo/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/categories/hugo/</guid>
             <description></description>
         </item><item>
             <title>VS Code</title>
-            <link>https://guguisnotapigeon.github.io/en/categories/vs-code/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/categories/vs-code/</link>
             <pubDate>Thu, 30 Apr 2026 18:42:46 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/categories/vs-code/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/categories/vs-code/</guid>
             <description></description>
         </item><item>
             <title>Other</title>
-            <link>https://guguisnotapigeon.github.io/en/categories/other/</link>
+            <link>https://www.guguisnotpigeon.dpdns.org/en/categories/other/</link>
             <pubDate>Sat, 25 Apr 2026 13:31:55 +0800</pubDate>
-            <guid>https://guguisnotapigeon.github.io/en/categories/other/</guid>
+            <guid>https://www.guguisnotpigeon.dpdns.org/en/categories/other/</guid>
             <description></description>
         </item></channel>
 </rss>
